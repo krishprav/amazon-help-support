@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+data/gold_progress.json
+data/ratings_progress.json
+raw/
+results/judge_cache/
+*.zip

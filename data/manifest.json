@@ -1,0 +1,15 @@
+{
+  "brand": "AmazonHelp",
+  "seed": 42,
+  "root_pairs": 76799,
+  "counts": {
+    "train": 2000,
+    "dev": 80,
+    "test": 200
+  },
+  "source": "raw/twcs/twcs.csv",
+  "intent_schema": "v2, eight intents from inspection of first 100 training examples",
+  "source_sha256": "cd297fcfa1bf6f99938be242e8e578980bc6d1b96adc8691abec9a39175b03c0",
+  "cohort_sha256": "b6271560afa23773f2fed9257cd491a075c0aa95be44518430866be2c694f00b",
+  "reply_join": "all direct brand replies, timestamp ascending, tweet ID tie-breaker"
+}
