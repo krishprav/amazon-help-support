@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "counts": {
+    "train": 2000,
+    "dev": 80,
+    "test": 200
+  },
+  "customer_overlap": 0,
+  "tweet_overlap": 0,
+  "normalized_exact_overlap": 0,
+  "prediction_count": 600,
+  "all_evidence_in_training": true,
+  "human_labels_present": 0,
+  "scope": "Does not detect semantic near-duplicates or guarantee root threads are complete."
+}
