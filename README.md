@@ -117,9 +117,11 @@ That writes blank train/dev/test labels. Completed gold lives in `data/gold.csv`
 - `src/report.py`, `src/audit.py`, `src/replay.py`: report, audit and replay
 - `tests/`: leakage, redaction, catalog fail-closed, metric denominators, review import
 
-## Submission
+## What’s in the repo
 
-Include completed `data/gold.csv`, `data/human_ratings.csv`, `data/human_provenance.json`, `results/judge.json` and `results/final/` in the published repo. Do not include `.env`, keys, `results/judge_cache/`, or `raw/twcs.csv`. Form: https://intelligent-bar-256.notion.site/39492cbf0da2800682cfc78a600a745f?pvs=105
+Gold labels, blind ratings, cached predictions, and scored metrics are included. `.env`, API keys, `results/judge_cache/`, and the original `twcs.csv` are not.
+
+`results/judge.json` is not here. A live judge run scored 3 of 60 replies, then the provider returned HTTP 405; the rest were not invented. `python3 src/workflow.py check` stays red until a complete judge file exists.
 
 ## Attribution
 
