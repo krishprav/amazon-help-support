@@ -1,0 +1,1802 @@
+[
+  {
+    "review_id": "R001",
+    "message": "[USER] [USER] tired amazon pantry and this is how my items ended up. They were spilled everywhere too. [URL]",
+    "reply": "Thanks for getting in touch about your request. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1037140",
+        "message": "[USER] Ordered 24th, Prime items, in stock, Prime one day delivery. Email: your items will be delivered on 28th. How’s that work?",
+        "reply": "[USER] Apologies for any concern, Chris! Selecting One-Day shipping will reduce the transit time after we've shipped your order, but it won't impact how long it takes us to obtain the item or prepare it for shipment: [URL] I hope this is helpful! ^SD"
+      },
+      {
+        "id": "1279770",
+        "message": "[USER] First time I had this problem but Vegas sent all my pantry items like this.  Rcvd 10/26 [URL]",
+        "reply": "[USER] 😔 We're always looking to improve! Please share your concerns: [URL] Let us know if anything was damaged! ^FR"
+      },
+      {
+        "id": "61042",
+        "message": "ah nuts\nforgot to cancel amazon prime before the trial period ended\ni bet that's how they get like half of their subs",
+        "reply": "[USER] We'd love to help! If you'd like to cancel your Prime membership, you can do so here: [URL] ^AC"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R002",
+    "message": "Dear [USER] - it's not really 2-day shipping if it doesn't ship for a week. You used to realize this - what happened?",
+    "reply": "Could you confirm your estimated date of delivery? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "137025",
+        "message": "Hey [USER] - What happened to my next day delivery?!? [URL]",
+        "reply": "[USER] Hi Charlie! One day delivery would also depend on stock availability and the delivery address selected. May I ask what you're purchasing so we can take a look?^CN"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2816296",
+        "message": "Dear [USER] \n\n😂😂😂 Thanks for making my day. [URL]",
+        "reply": "[USER] We try to meet the expectations of our customers and comments can help us do so. Please use the following page to send us feedback on this as it is very much appreciated: [URL] ^DO"
+      },
+      {
+        "id": "425064",
+        "message": "[USER] I got 2 day shipping and it’s been a week... help",
+        "reply": "[USER] Thank you for contacting us today! As we don't have access to account details via Twitter could you confirm if your order has shipped? Also, what was the delivery date provided in the order confirmation e-mail? You can find that here:  [URL] ^AZ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R003",
+    "message": "[USER] please come up with a policy for exchange of old kindle to a newer version in India region..am a prime member and really enjoying the shopping experience with #amazon",
+    "reply": "Thanks for getting in touch about your product issue. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "222607",
+        "message": "Want to buy 10 or E with exchange but exchange is not available in my PIN code is there is other way [USER] I really want this",
+        "reply": "[USER] I understand your concern, please contact us here: [URL] so that we can assist you accordingly. ^SP"
+      },
+      {
+        "id": "226423",
+        "message": "[USER] android Alexa app says new version with calling available but play store installs old version?",
+        "reply": "[USER] Hello, have you tried resetting the device ? ^CR"
+      },
+      {
+        "id": "2663196",
+        "message": "[USER] I'm a prime member from India. Could you please let me know when Prime Music will be launched for prime users?",
+        "reply": "[USER] Amazon Prime Music will be available to Indian Prime Members exclusively on echo devices starting 10/31/17 and in near future would be available across other devices & operating systems including Android, IOS, Fire TV , PC etc. Kindly stay tuned. ^PS"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R004",
+    "message": "[USER] hasta cuando tendrán mirror mirror para envió 😭",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1201203",
+        "message": "Y cuando en [USER] todo era genial se inventaron Amazon Logistics para fasridiarlo todo. Que desastre de servicio. Fatal.",
+        "reply": "[USER] Hola, lamento cualquier inconveniente, ¿ Podrías informarme si tienes algún pedido pendiente de entrega? ^AZ"
+      },
+      {
+        "id": "2721796",
+        "message": "o site da [USER] não está abrindo para mim. para vocês está?",
+        "reply": "[USER] Está sim Alexandre. Já tentou em outro navegador ou outro dispositivo? ^JD"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "602336",
+        "message": "cuando [USER] perdio mi paquete [URL]",
+        "reply": "[USER] Hola Eduardo, lamentamos los inconvenientes que hayas tenido. Puedes indicarnos ¿en este momento tienes algún pedido pendiente de entrega? Estaremos encantados de ayudarte. ^MZ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R005",
+    "message": "[USER] I got this message from Amazon but the amount 5000is not credited in my Amazon pay balance wallet [URL]",
+    "reply": "Thanks for getting in touch about your return or cancellation request. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "2390477",
+        "message": "[USER] I have recharged my mobile number (Jio) using the balance I loaded in my Amazon pay wallet.. So actually there is an offer that If we recharge in that manner,we'll receive a cash back of Rs.99 with in 7 days,But still I didn't get my cashback,plz respond [URL]",
+        "reply": "[USER] I understand your concern regarding the cashback. However, I see the recharge was made on November 9, 2017, as per which the notified 7 days haven't passed. I'd request you to wait till the time period, I'm positive the cashback will be credited. 1/2 ^AP [USER] Please don't provide your order details, as we consider it to be personal information. Our Twitter page is visible to the public. 2/2 ^AP"
+      },
+      {
+        "id": "347589",
+        "message": "[USER] got a message that my order was shipped yesterday. This morning I get a refund of the purchase amount on my card. Confused!!",
+        "reply": "[USER] Sorry for the confusion. Please contact us here: [URL] and we'll be glad to help you. ^SI"
+      },
+      {
+        "id": "746781",
+        "message": "[USER] [USER] how do I send my my Amazon pay balance to my bank account?",
+        "reply": "[USER] We don't have the transfer feature available currently. For more info: [URL] ^HD"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R006",
+    "message": "[USER] wth I had order I was waiting for since Thursday and it was cancelled without ANY notification! First time that’s happened. ☹️",
+    "reply": "Thanks for getting in touch about your return or cancellation request. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "171010",
+        "message": "[USER] I cancelled an order but had already been charged for it. Any idea on when I'll see a refund?",
+        "reply": "[USER] This is not an actual charge, it is an authorization. Usually, this is released in 3 to 5 business days. For the best information regarding the release of an authorization, please contact your financial institution.  ^LM"
+      },
+      {
+        "id": "1741020",
+        "message": "Hey [USER] why have you cancelled my order? 😡\nOrder number: [ORDER_ID]",
+        "reply": "[USER] On order cancellation, we always send out an e-mail to your registered e-mail with Amazon. 1/2 ^CB [USER] Please don't provide your order details as we consider it personal info. Our twitter page is visible to public. 2/2^CB"
+      },
+      {
+        "id": "64214",
+        "message": "[USER] Been waiting for my order for over a week now, the first time it said it was “delivered” at 11:45pm 🤔 now the replacement said attempted delivery last night when I was sat in waiting all evening...customer service are useless.",
+        "reply": "[USER] Sorry to hear that, Dan. Can I ask what the latest tracking update has been? You can check here: [URL] ^TI"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R007",
+    "message": "[USER] hasta cuando tendrán mirror mirror para envió 😭",
+    "reply": "[USER] Hola Eduardo, lamentamos los inconvenientes que hayas tenido. Puedes indicarnos ¿en este momento tienes algún pedido pendiente de entrega? Estaremos encantados de ayudarte. ^MZ",
+    "evidence": [
+      {
+        "id": "1201203",
+        "message": "Y cuando en [USER] todo era genial se inventaron Amazon Logistics para fasridiarlo todo. Que desastre de servicio. Fatal.",
+        "reply": "[USER] Hola, lamento cualquier inconveniente, ¿ Podrías informarme si tienes algún pedido pendiente de entrega? ^AZ"
+      },
+      {
+        "id": "2721796",
+        "message": "o site da [USER] não está abrindo para mim. para vocês está?",
+        "reply": "[USER] Está sim Alexandre. Já tentou em outro navegador ou outro dispositivo? ^JD"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "602336",
+        "message": "cuando [USER] perdio mi paquete [URL]",
+        "reply": "[USER] Hola Eduardo, lamentamos los inconvenientes que hayas tenido. Puedes indicarnos ¿en este momento tienes algún pedido pendiente de entrega? Estaremos encantados de ayudarte. ^MZ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R008",
+    "message": "[USER] I had won in your #apptreasurehunt on 29th September but I haven't received the prize for it as of now. please let me know abt it",
+    "reply": "Could you tell us what error you're seeing while opening the app? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1037411",
+        "message": ".[USER] Is there any issue with the mobile App. It is not diagnosing the phone. Stuck at Start diagnostics page.",
+        "reply": "[USER] That's strange, Dikshit. Could you tell us what error you're seeing while opening the app? ^NK"
+      },
+      {
+        "id": "1420501",
+        "message": "[USER] hello my account won’t let me be a prime membership can you help?",
+        "reply": "[USER] I'm sorry for the account trouble, Kimberley! Are you getting an error when trying to sign up: [URL] ^SD"
+      },
+      {
+        "id": "843521",
+        "message": "[USER] received the prize but the amazon gV is  not working... I can't add it to my account [URL]",
+        "reply": "[USER] I am sorry to hear this. Can I ask for you to reach out to us using the link below so we can investigate this for you: [URL]"
+      },
+      {
+        "id": "977316",
+        "message": "Hi [USER]  - I still haven't got my prize iPhone 7 and it's been more than 10 days now. Plz help what should I do ? [USER] [URL]",
+        "reply": "[USER] We've responded to you via DM please refer. ^AG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R009",
+    "message": "Nice one [USER] delivered my parcel to a neighbour but no indication which neighbour! #huntthedelivery",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "164885",
+        "message": "[USER] hey guys! Had an issue with a order that I asked to be delivered to a neighbour but was posted through letter box and is now destroyed by dog.",
+        "reply": "[USER] Hello Ella! I'm terribly sorry to hear this has happened! Since we do not have account access over social media, we'd be more than happy to help w/ this issue via phone or chat here: [URL] ^TM"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2471704",
+        "message": "[USER] is there a way to have a parcel NOT go to a neighbour and ONLY to my safe place?",
+        "reply": "[USER] I'm sorry your parcel wasn't left at your safe place! Please reach out to us via phone/chat here: [URL] and we can help with this. \n-Joshua"
+      },
+      {
+        "id": "2552211",
+        "message": "[USER] i specifically asked for an order not to go to my neighbour and it has!",
+        "reply": "[USER] I'm so sorry your order wasn't left at your safe place, Mark! We'd like to look into this for you and make sure this is reported to the courier. In order for us to do so, please reach out to us here: [URL] ^WJ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R010",
+    "message": "[USER] Abend ne frage ich habe COD Ww2 vorbestellt und wird versendet am 30.10. heißt das wirklich das es bei mir am 3.11 da ist?!",
+    "reply": "Without providing personal or account information, could you tell us more about what's going on? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "2499127",
+        "message": "[USER] Hi,habe da eine Frage.Habe mir Pokémon Ultrasonne/Mond Dual Pack bestellt,welches am Fr ankommen soll.Nun stand dort heute aber versand am 18.11 und Zustellung DIENSTAG. Habe dann auf Premiumversand gestellt und schon steht dort wieder das normale Datum.",
+        "reply": "[USER] Während der Vorbestellzeit wirst du auf der Produktseite des jeweiligen Artikels informiert, welche Versandart du wählen musst, um die Lieferung noch am Erscheinungstag zu erhalten. Ein Update zu deiner Bestellung erhältst du spätestens mit der Versandbestätigung. ^SI"
+      },
+      {
+        "id": "2539602",
+        "message": "Ich habe seit heute Amazon Prime Video, das heißt: Ich kann die #Bundesliga auf #Eurosport schauen.",
+        "reply": "[USER] Du kannst diese über Amazon Channels buchen. Guck mal hier: [URL] Ganz lieber Gruß ^TG"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "622598",
+        "message": "Sagt mal [USER], zählt das als Retoure wenn ich mir Paketband bei euch bestelle und das Stück für Stück bei meinen Rücksendungen an euch zurückschicke? 🤔😁",
+        "reply": "[USER] Wenn du damit andere Päckchen für uns zuklebst ja, sonst hätten wir das lieber am Stück zurück ;) Mal ganz davon abgesehen, die Päckchen sollen zu dir, nicht zu uns! ^AN"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R011",
+    "message": "[USER] I used amazon pay to place an order for the first time but I didn't get 15% cashback. Please solve my problem",
+    "reply": "Without providing personal or account information, could you tell us more about what's going on? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1208366",
+        "message": "Hi! [USER] is there any chance to get support from you in english? I need to solve a problem!!!",
+        "reply": "[USER] How can we help you? What's the problem? Kind regards ^MF"
+      },
+      {
+        "id": "2866115",
+        "message": "[USER] How do I solve this? [URL]",
+        "reply": "[USER] Please try these tips, and let us know if it helps: [URL] ^BH"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "832136",
+        "message": "[USER] \nVery dissapointing [USER] showing item delivered but not delivered yet and didn't get my refund also nd not for first time [URL]",
+        "reply": "[USER] I'm sorry the tracking has been updated as delivered even though you haven't received the product. This could 1/3 ^SH [USER] be due to incorrect tracking scan update. Kindly contact our support team here: [URL] and we'll 2/3 ^SH [USER] be happy to help. 3/3 ^SH"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R012",
+    "message": "[USER] promised 1 day prime delivery but finally delivered in 4 days! Itz amusing tht they always hv problems with every delivery of mine",
+    "reply": "Thanks for getting in touch about your delivery issue. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1033038",
+        "message": "[USER] how is mine delayed, but I can order another for delivery today? Should I cancel and rebuy? [URL]",
+        "reply": "[USER] The most accurate delivery date would be at checkout. Have you placed it in your cart & added shipping address yet, Nolan? ^FR"
+      },
+      {
+        "id": "1205861",
+        "message": "[USER] we've placed return for an order since long & were promised tht the item would be collected 2 days ago. No one has come yet.",
+        "reply": "[USER] Kindly get in touch with us here: [URL] and we’ll be glad to help you. ^AG"
+      },
+      {
+        "id": "421511",
+        "message": "I choose 2 day delivery option but product not receive in 2 days it takes 5 days even after I m prime member [USER] [USER] [URL]",
+        "reply": "[USER] Sorry that you feel that way. But did we happen to miss the estimated delivery date for your order? ^HR"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R013",
+    "message": "[USER] #once again my orders all screwed up#deliver date misleading and invalid#losing your touch #demanding credit on all items",
+    "reply": "[USER] Sorry for the hassle Anant. Please report this to our support team here: [URL] and we'll check this. ^HN",
+    "evidence": [
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2383159",
+        "message": "[USER] Delhivery has yet again screwed up and I can't even get in touch. Will probably have to refuse delivery if it doesn't come today.",
+        "reply": "[USER] Sorry for the inconvenience. Please contact our support team here: [URL] We will look into it and assist. ^GU"
+      },
+      {
+        "id": "396052",
+        "message": "So [USER] screwed up 3 out of 4 separate orders delivered to me, all today! A new personal best.",
+        "reply": "[USER] Sorry for the hassle Anant. Please report this to our support team here: [URL] and we'll check this. ^HN"
+      },
+      {
+        "id": "566567",
+        "message": "[USER] only 3 items out of 6 ordered on BF delivered. All 2 Day Prime, all shipped but still not delivered. New date every day. Tracking is useless. When do I get my items ?",
+        "reply": "[USER] We'd be happy to look into this with you over phone or chat here: [URL] ^RR"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R014",
+    "message": "Well [USER] Flex missed another delivery schedule. That's 5 delayed or lost pkgs out of 14. While USPS & UPS are 0 loss/delayed out of nearly 100 pkgs delivered. Postman even found 1 pkg in bushes that Flex \"delivered\". \nSeems Flex QoS varys radically. Bad sig-to-noise ratio. [URL]",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1480838",
+        "message": "Everyone is getting their Amazon Echo while Amazon has delayed the delivery of mine to Monday 😢😢😢😭",
+        "reply": "[USER] We understand your excitement. Sorry for the delay. Kindly wait until the revised estimated delivery date. ^NS"
+      },
+      {
+        "id": "1774000",
+        "message": "Ok apparently with Amazon Flex they have the driver take a picture of my house to let me know my package was delivered. NO THANKS. Go back to using UPS so my shit will arrive at 5 instead of 9 at fuckin night",
+        "reply": "[USER] I'm sorry the order arrived late! Please submit your order details here: [URL] so we can take a closer look ^TN"
+      },
+      {
+        "id": "2974894",
+        "message": "[USER] via #UPS 3 days ago: “your package is out for delivery.”\nUPS now: “a carrier delay has occurred.....” loosely translated: “we have no idea where your pkg is.....”",
+        "reply": "[USER] I'm very sorry for the delay. Whenever you have a chance, reach out to us here: [URL] We'd be happy to look into options in real-time with you. ^SK"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R015",
+    "message": "[USER] [USER] ..i ordered books from amazonindia on 23rd Nov. As a prime customer ,was promised to delivered on 24th nov but not delivered. Escalated the issue and again promised to delivered at 25th nov but yet i havent received the order...",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1071040",
+        "message": "Items has not been delivered yet but order status delivered. So cancelled the order#[ORDER_ID]. [USER] [USER] [URL]",
+        "reply": "[USER] Please connect with our support team here: [URL] for any further assistance. ^HA [USER] Please don't provide your order details, we consider it personal information. Our Twitter page is visible to public. ^HA"
+      },
+      {
+        "id": "1223299",
+        "message": "[USER] Placed order 5th Oct. Due between 23rd Oct - 2nd Nov and still NOT dispatched? Ridiculous 😠",
+        "reply": "[USER] Was this sold directly by Amazon or by a third party seller? ^PK"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2309324",
+        "message": "[USER] [USER] Order date\n09-Nov-2017\nOrder no.\n[ORDER_ID]\nWhere's my order? You guranteed its delivery on 10th nov but today is 13th. No one in your org hasa damn clue about it. And im a prime member, to make matters worse. Poor stuff.",
+        "reply": "[USER] I'm sorry you've not received your order. Let us have a closer look at this. Fill in your details here: [URL] & we'll assist you. Also, please don't provide your order details, we consider it to be personal info. Our page is visible to the public.^SF"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R016",
+    "message": "Well [USER] Flex missed another delivery schedule. That's 5 delayed or lost pkgs out of 14. While USPS & UPS are 0 loss/delayed out of nearly 100 pkgs delivered. Postman even found 1 pkg in bushes that Flex \"delivered\". \nSeems Flex QoS varys radically. Bad sig-to-noise ratio. [URL]",
+    "reply": "Thanks for getting in touch about your delivery issue. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1480838",
+        "message": "Everyone is getting their Amazon Echo while Amazon has delayed the delivery of mine to Monday 😢😢😢😭",
+        "reply": "[USER] We understand your excitement. Sorry for the delay. Kindly wait until the revised estimated delivery date. ^NS"
+      },
+      {
+        "id": "1774000",
+        "message": "Ok apparently with Amazon Flex they have the driver take a picture of my house to let me know my package was delivered. NO THANKS. Go back to using UPS so my shit will arrive at 5 instead of 9 at fuckin night",
+        "reply": "[USER] I'm sorry the order arrived late! Please submit your order details here: [URL] so we can take a closer look ^TN"
+      },
+      {
+        "id": "2974894",
+        "message": "[USER] via #UPS 3 days ago: “your package is out for delivery.”\nUPS now: “a carrier delay has occurred.....” loosely translated: “we have no idea where your pkg is.....”",
+        "reply": "[USER] I'm very sorry for the delay. Whenever you have a chance, reach out to us here: [URL] We'd be happy to look into options in real-time with you. ^SK"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R017",
+    "message": "Dear [USER] - it's not really 2-day shipping if it doesn't ship for a week. You used to realize this - what happened?",
+    "reply": "[USER] Thank you for contacting us today! As we don't have access to account details via Twitter could you confirm if your order has shipped? Also, what was the delivery date provided in the order confirmation e-mail? You can find that here:  [URL] ^AZ",
+    "evidence": [
+      {
+        "id": "137025",
+        "message": "Hey [USER] - What happened to my next day delivery?!? [URL]",
+        "reply": "[USER] Hi Charlie! One day delivery would also depend on stock availability and the delivery address selected. May I ask what you're purchasing so we can take a look?^CN"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2816296",
+        "message": "Dear [USER] \n\n😂😂😂 Thanks for making my day. [URL]",
+        "reply": "[USER] We try to meet the expectations of our customers and comments can help us do so. Please use the following page to send us feedback on this as it is very much appreciated: [URL] ^DO"
+      },
+      {
+        "id": "425064",
+        "message": "[USER] I got 2 day shipping and it’s been a week... help",
+        "reply": "[USER] Thank you for contacting us today! As we don't have access to account details via Twitter could you confirm if your order has shipped? Also, what was the delivery date provided in the order confirmation e-mail? You can find that here:  [URL] ^AZ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R018",
+    "message": "[USER] #once again my orders all screwed up#deliver date misleading and invalid#losing your touch #demanding credit on all items",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2383159",
+        "message": "[USER] Delhivery has yet again screwed up and I can't even get in touch. Will probably have to refuse delivery if it doesn't come today.",
+        "reply": "[USER] Sorry for the inconvenience. Please contact our support team here: [URL] We will look into it and assist. ^GU"
+      },
+      {
+        "id": "396052",
+        "message": "So [USER] screwed up 3 out of 4 separate orders delivered to me, all today! A new personal best.",
+        "reply": "[USER] Sorry for the hassle Anant. Please report this to our support team here: [URL] and we'll check this. ^HN"
+      },
+      {
+        "id": "566567",
+        "message": "[USER] only 3 items out of 6 ordered on BF delivered. All 2 Day Prime, all shipped but still not delivered. New date every day. Tracking is useless. When do I get my items ?",
+        "reply": "[USER] We'd be happy to look into this with you over phone or chat here: [URL] ^RR"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R019",
+    "message": "Dear [USER] - it's not really 2-day shipping if it doesn't ship for a week. You used to realize this - what happened?",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "137025",
+        "message": "Hey [USER] - What happened to my next day delivery?!? [URL]",
+        "reply": "[USER] Hi Charlie! One day delivery would also depend on stock availability and the delivery address selected. May I ask what you're purchasing so we can take a look?^CN"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2816296",
+        "message": "Dear [USER] \n\n😂😂😂 Thanks for making my day. [URL]",
+        "reply": "[USER] We try to meet the expectations of our customers and comments can help us do so. Please use the following page to send us feedback on this as it is very much appreciated: [URL] ^DO"
+      },
+      {
+        "id": "425064",
+        "message": "[USER] I got 2 day shipping and it’s been a week... help",
+        "reply": "[USER] Thank you for contacting us today! As we don't have access to account details via Twitter could you confirm if your order has shipped? Also, what was the delivery date provided in the order confirmation e-mail? You can find that here:  [URL] ^AZ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R020",
+    "message": "[USER] loved echo dot, ordered products, played songs, booked Ola just with voice!",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1416445",
+        "message": "[USER] how do I pair my Fire TV stick with d Echo Dot so I can play shows with voice commands?It doesn't show up in d devices list",
+        "reply": "[USER] Keep checking the Echo page for new devices that will support Echo Dot. ^VM"
+      },
+      {
+        "id": "288021",
+        "message": "[USER] bought an echo and a dot , the dot is perfect but my echo drops connection every 2 days & i have to go thru set up again , help",
+        "reply": "[USER] Hi, sorry to hear that. How far is the Echo place from your router? Is it connected to the 2.4GHz or 5GHz band? ^JJ"
+      },
+      {
+        "id": "453314",
+        "message": "[USER] hello,my echo dot has stopped connecting Bluetooth devices,the app pairs with a device but the echo dot says device not found",
+        "reply": "[USER] Thanks for contacting us over Twitter. Let's try these troubleshooting steps here: [URL] and please let us know if the issue continues. ^GG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R021",
+    "message": "[USER] promised 1 day prime delivery but finally delivered in 4 days! Itz amusing tht they always hv problems with every delivery of mine",
+    "reply": "[USER] Kindly get in touch with us here: [URL] and we’ll be glad to help you. ^AG",
+    "evidence": [
+      {
+        "id": "1033038",
+        "message": "[USER] how is mine delayed, but I can order another for delivery today? Should I cancel and rebuy? [URL]",
+        "reply": "[USER] The most accurate delivery date would be at checkout. Have you placed it in your cart & added shipping address yet, Nolan? ^FR"
+      },
+      {
+        "id": "1205861",
+        "message": "[USER] we've placed return for an order since long & were promised tht the item would be collected 2 days ago. No one has come yet.",
+        "reply": "[USER] Kindly get in touch with us here: [URL] and we’ll be glad to help you. ^AG"
+      },
+      {
+        "id": "421511",
+        "message": "I choose 2 day delivery option but product not receive in 2 days it takes 5 days even after I m prime member [USER] [USER] [URL]",
+        "reply": "[USER] Sorry that you feel that way. But did we happen to miss the estimated delivery date for your order? ^HR"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R022",
+    "message": "[USER] I got this message from Amazon but the amount 5000is not credited in my Amazon pay balance wallet [URL]",
+    "reply": "[USER] Sorry for the confusion. Please contact us here: [URL] and we'll be glad to help you. ^SI",
+    "evidence": [
+      {
+        "id": "2390477",
+        "message": "[USER] I have recharged my mobile number (Jio) using the balance I loaded in my Amazon pay wallet.. So actually there is an offer that If we recharge in that manner,we'll receive a cash back of Rs.99 with in 7 days,But still I didn't get my cashback,plz respond [URL]",
+        "reply": "[USER] I understand your concern regarding the cashback. However, I see the recharge was made on November 9, 2017, as per which the notified 7 days haven't passed. I'd request you to wait till the time period, I'm positive the cashback will be credited. 1/2 ^AP [USER] Please don't provide your order details, as we consider it to be personal information. Our Twitter page is visible to the public. 2/2 ^AP"
+      },
+      {
+        "id": "347589",
+        "message": "[USER] got a message that my order was shipped yesterday. This morning I get a refund of the purchase amount on my card. Confused!!",
+        "reply": "[USER] Sorry for the confusion. Please contact us here: [URL] and we'll be glad to help you. ^SI"
+      },
+      {
+        "id": "746781",
+        "message": "[USER] [USER] how do I send my my Amazon pay balance to my bank account?",
+        "reply": "[USER] We don't have the transfer feature available currently. For more info: [URL] ^HD"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R023",
+    "message": "[USER] Hey. Why is your delivery service so appalling in Herts? No tracking on parcels. Things getting lost everywhere. Lies and incompetence at call centre. Learn from [USER] if you want to see real delivery in action. #crapSrevice",
+    "reply": "[USER] look into it and reach out to you soon. 2/2 ^AP [USER] I'm sorry you've not received your order. Kindly report it to our support team here: [URL] we'll 1/2 ^AP",
+    "evidence": [
+      {
+        "id": "1728607",
+        "message": "[USER] it’s a fraud Amazon I have not taken the delivery already notified your call centre [URL]",
+        "reply": "[USER] look into it and reach out to you soon. 2/2 ^AP [USER] I'm sorry you've not received your order. Kindly report it to our support team here: [URL] we'll 1/2 ^AP"
+      },
+      {
+        "id": "262581",
+        "message": "Terrible experience with amazon customer service and delivery service !! Tracking #[NUMBER]. #[USER] #[USER] #[USER]",
+        "reply": "[USER] Please don't provide your details, we consider it personal information. Our Twitter page is visible to public. 2/2 ^HD [USER] Apologies for the delivery experience. Could you let us know what went wrong? We'd like to look into it. 1/2 ^HD"
+      },
+      {
+        "id": "360704",
+        "message": "[USER] [USER] Where is order ?. No setisfectory response from CC. Delivery service getting worse ..",
+        "reply": "[USER] I'm sorry, Lokendra. Did we miss the estimated delivery date? ^NK"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R024",
+    "message": "[USER] I used amazon pay to place an order for the first time but I didn't get 15% cashback. Please solve my problem",
+    "reply": "[USER] Please try these tips, and let us know if it helps: [URL] ^BH",
+    "evidence": [
+      {
+        "id": "1208366",
+        "message": "Hi! [USER] is there any chance to get support from you in english? I need to solve a problem!!!",
+        "reply": "[USER] How can we help you? What's the problem? Kind regards ^MF"
+      },
+      {
+        "id": "2866115",
+        "message": "[USER] How do I solve this? [URL]",
+        "reply": "[USER] Please try these tips, and let us know if it helps: [URL] ^BH"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "832136",
+        "message": "[USER] \nVery dissapointing [USER] showing item delivered but not delivered yet and didn't get my refund also nd not for first time [URL]",
+        "reply": "[USER] I'm sorry the tracking has been updated as delivered even though you haven't received the product. This could 1/3 ^SH [USER] be due to incorrect tracking scan update. Kindly contact our support team here: [URL] and we'll 2/3 ^SH [USER] be happy to help. 3/3 ^SH"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R025",
+    "message": "[USER] customer service degrading my order in dispatched status from last 5 days which was returned. Reg mobile number [NUMBER]",
+    "reply": "[USER] We're here to help, if we can, or you can reach us best by phone or chat here: [URL] ^AM",
+    "evidence": [
+      {
+        "id": "2336091",
+        "message": "[USER] your customer service is 💯🤙🏻",
+        "reply": "[USER] Thanks for the shout out! We think you're the bee's knees! ^EP"
+      },
+      {
+        "id": "339476",
+        "message": "[USER] where is your customer service number??? 😩😤😡",
+        "reply": "[USER] We're here to help, if we can, or you can reach us best by phone or chat here: [URL] ^AM"
+      },
+      {
+        "id": "937333",
+        "message": "Last 4thOctober I returned an order. But so far no refund has come to me.This service can not be expected from you.\n[USER] [USER]",
+        "reply": "[USER] I'm sorry about the delay in refund. Kindly connect with us here: [URL] we'd like to help. ^SG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R026",
+    "message": "[USER] I got this message from Amazon but the amount 5000is not credited in my Amazon pay balance wallet [URL]",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "2390477",
+        "message": "[USER] I have recharged my mobile number (Jio) using the balance I loaded in my Amazon pay wallet.. So actually there is an offer that If we recharge in that manner,we'll receive a cash back of Rs.99 with in 7 days,But still I didn't get my cashback,plz respond [URL]",
+        "reply": "[USER] I understand your concern regarding the cashback. However, I see the recharge was made on November 9, 2017, as per which the notified 7 days haven't passed. I'd request you to wait till the time period, I'm positive the cashback will be credited. 1/2 ^AP [USER] Please don't provide your order details, as we consider it to be personal information. Our Twitter page is visible to the public. 2/2 ^AP"
+      },
+      {
+        "id": "347589",
+        "message": "[USER] got a message that my order was shipped yesterday. This morning I get a refund of the purchase amount on my card. Confused!!",
+        "reply": "[USER] Sorry for the confusion. Please contact us here: [URL] and we'll be glad to help you. ^SI"
+      },
+      {
+        "id": "746781",
+        "message": "[USER] [USER] how do I send my my Amazon pay balance to my bank account?",
+        "reply": "[USER] We don't have the transfer feature available currently. For more info: [URL] ^HD"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R027",
+    "message": "[USER] wth I had order I was waiting for since Thursday and it was cancelled without ANY notification! First time that’s happened. ☹️",
+    "reply": "[USER] This is not an actual charge, it is an authorization. Usually, this is released in 3 to 5 business days. For the best information regarding the release of an authorization, please contact your financial institution.  ^LM",
+    "evidence": [
+      {
+        "id": "171010",
+        "message": "[USER] I cancelled an order but had already been charged for it. Any idea on when I'll see a refund?",
+        "reply": "[USER] This is not an actual charge, it is an authorization. Usually, this is released in 3 to 5 business days. For the best information regarding the release of an authorization, please contact your financial institution.  ^LM"
+      },
+      {
+        "id": "1741020",
+        "message": "Hey [USER] why have you cancelled my order? 😡\nOrder number: [ORDER_ID]",
+        "reply": "[USER] On order cancellation, we always send out an e-mail to your registered e-mail with Amazon. 1/2 ^CB [USER] Please don't provide your order details as we consider it personal info. Our twitter page is visible to public. 2/2^CB"
+      },
+      {
+        "id": "64214",
+        "message": "[USER] Been waiting for my order for over a week now, the first time it said it was “delivered” at 11:45pm 🤔 now the replacement said attempted delivery last night when I was sat in waiting all evening...customer service are useless.",
+        "reply": "[USER] Sorry to hear that, Dan. Can I ask what the latest tracking update has been? You can check here: [URL] ^TI"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R028",
+    "message": "[USER] I placed a per-order for Xanathar's Guide To Everything back in July and I gotta I am beyond annoyed that the pre-order was never fulfilled. The book hasn't even been dispatched. What's going on? [USER] [USER] [USER]",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1022874",
+        "message": "[USER] I placed an order but I guess it hasn't placed & your customer service isn't responding",
+        "reply": "[USER] That's unusual. We'd like to check this, kindly connect with us here: [URL] ^JS"
+      },
+      {
+        "id": "1387295",
+        "message": "[USER] why hasn't my order been shipped yet it was released yesterday annoyed yet again",
+        "reply": "[USER] Hi, what is the tracking information showing on your parcel ?You can check here : [URL] ^CR"
+      },
+      {
+        "id": "2380842",
+        "message": "I am beyond LIVID! What is the point of Amazon Prime when your order is going to be a week late? Literally BULL, [USER] [URL]",
+        "reply": "[USER] I'm sorry your order is delayed. Unforeseen circumstances can cause delays. Have we reached out to UPS to find out the reason for the delay? ^BE"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R029",
+    "message": "[USER] Hey. Why is your delivery service so appalling in Herts? No tracking on parcels. Things getting lost everywhere. Lies and incompetence at call centre. Learn from [USER] if you want to see real delivery in action. #crapSrevice",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1728607",
+        "message": "[USER] it’s a fraud Amazon I have not taken the delivery already notified your call centre [URL]",
+        "reply": "[USER] look into it and reach out to you soon. 2/2 ^AP [USER] I'm sorry you've not received your order. Kindly report it to our support team here: [URL] we'll 1/2 ^AP"
+      },
+      {
+        "id": "262581",
+        "message": "Terrible experience with amazon customer service and delivery service !! Tracking #[NUMBER]. #[USER] #[USER] #[USER]",
+        "reply": "[USER] Please don't provide your details, we consider it personal information. Our Twitter page is visible to public. 2/2 ^HD [USER] Apologies for the delivery experience. Could you let us know what went wrong? We'd like to look into it. 1/2 ^HD"
+      },
+      {
+        "id": "360704",
+        "message": "[USER] [USER] Where is order ?. No setisfectory response from CC. Delivery service getting worse ..",
+        "reply": "[USER] I'm sorry, Lokendra. Did we miss the estimated delivery date? ^NK"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R030",
+    "message": "[USER] Abend ne frage ich habe COD Ww2 vorbestellt und wird versendet am 30.10. heißt das wirklich das es bei mir am 3.11 da ist?!",
+    "reply": "[USER] Während der Vorbestellzeit wirst du auf der Produktseite des jeweiligen Artikels informiert, welche Versandart du wählen musst, um die Lieferung noch am Erscheinungstag zu erhalten. Ein Update zu deiner Bestellung erhältst du spätestens mit der Versandbestätigung. ^SI",
+    "evidence": [
+      {
+        "id": "2499127",
+        "message": "[USER] Hi,habe da eine Frage.Habe mir Pokémon Ultrasonne/Mond Dual Pack bestellt,welches am Fr ankommen soll.Nun stand dort heute aber versand am 18.11 und Zustellung DIENSTAG. Habe dann auf Premiumversand gestellt und schon steht dort wieder das normale Datum.",
+        "reply": "[USER] Während der Vorbestellzeit wirst du auf der Produktseite des jeweiligen Artikels informiert, welche Versandart du wählen musst, um die Lieferung noch am Erscheinungstag zu erhalten. Ein Update zu deiner Bestellung erhältst du spätestens mit der Versandbestätigung. ^SI"
+      },
+      {
+        "id": "2539602",
+        "message": "Ich habe seit heute Amazon Prime Video, das heißt: Ich kann die #Bundesliga auf #Eurosport schauen.",
+        "reply": "[USER] Du kannst diese über Amazon Channels buchen. Guck mal hier: [URL] Ganz lieber Gruß ^TG"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "622598",
+        "message": "Sagt mal [USER], zählt das als Retoure wenn ich mir Paketband bei euch bestelle und das Stück für Stück bei meinen Rücksendungen an euch zurückschicke? 🤔😁",
+        "reply": "[USER] Wenn du damit andere Päckchen für uns zuklebst ja, sonst hätten wir das lieber am Stück zurück ;) Mal ganz davon abgesehen, die Päckchen sollen zu dir, nicht zu uns! ^AN"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R031",
+    "message": "[USER] how can I see when my prime account is due for renewal?",
+    "reply": "Thanks for getting in touch about your account issue. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1033194",
+        "message": "[USER] order processed and shipped ,then cancelled due to payment error. Amount has been deducted from my account.",
+        "reply": "[USER] I am sorry about the cancellation of your order. However, the refund will be processed to your original payment (1/2)^SF [USER] method in 3-5 business days for the amount deducted. You may check the refund status here: [URL] (2/2)^SF"
+      },
+      {
+        "id": "1242823",
+        "message": "[USER] how do I change the email address associated with an account when I no longer have access to that email account!",
+        "reply": "[USER] If you have access to your [URL] account, you can change your email address here: [URL] ^JP"
+      },
+      {
+        "id": "2467647",
+        "message": "[USER] My Prime order was due for delivery by 9pm today.Been in all day waiting, and no delivery. Disappointed.",
+        "reply": "[USER] I'm very sorry for this delay with your order's delivery. Let us look into this with you here: [URL] ^DO"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R032",
+    "message": "[USER] [USER] tired amazon pantry and this is how my items ended up. They were spilled everywhere too. [URL]",
+    "reply": "[USER] 😔 We're always looking to improve! Please share your concerns: [URL] Let us know if anything was damaged! ^FR",
+    "evidence": [
+      {
+        "id": "1037140",
+        "message": "[USER] Ordered 24th, Prime items, in stock, Prime one day delivery. Email: your items will be delivered on 28th. How’s that work?",
+        "reply": "[USER] Apologies for any concern, Chris! Selecting One-Day shipping will reduce the transit time after we've shipped your order, but it won't impact how long it takes us to obtain the item or prepare it for shipment: [URL] I hope this is helpful! ^SD"
+      },
+      {
+        "id": "1279770",
+        "message": "[USER] First time I had this problem but Vegas sent all my pantry items like this.  Rcvd 10/26 [URL]",
+        "reply": "[USER] 😔 We're always looking to improve! Please share your concerns: [URL] Let us know if anything was damaged! ^FR"
+      },
+      {
+        "id": "61042",
+        "message": "ah nuts\nforgot to cancel amazon prime before the trial period ended\ni bet that's how they get like half of their subs",
+        "reply": "[USER] We'd love to help! If you'd like to cancel your Prime membership, you can do so here: [URL] ^AC"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R033",
+    "message": "[USER] Hey. Why is your delivery service so appalling in Herts? No tracking on parcels. Things getting lost everywhere. Lies and incompetence at call centre. Learn from [USER] if you want to see real delivery in action. #crapSrevice",
+    "reply": "Thanks for getting in touch about your delivery issue. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1728607",
+        "message": "[USER] it’s a fraud Amazon I have not taken the delivery already notified your call centre [URL]",
+        "reply": "[USER] look into it and reach out to you soon. 2/2 ^AP [USER] I'm sorry you've not received your order. Kindly report it to our support team here: [URL] we'll 1/2 ^AP"
+      },
+      {
+        "id": "262581",
+        "message": "Terrible experience with amazon customer service and delivery service !! Tracking #[NUMBER]. #[USER] #[USER] #[USER]",
+        "reply": "[USER] Please don't provide your details, we consider it personal information. Our Twitter page is visible to public. 2/2 ^HD [USER] Apologies for the delivery experience. Could you let us know what went wrong? We'd like to look into it. 1/2 ^HD"
+      },
+      {
+        "id": "360704",
+        "message": "[USER] [USER] Where is order ?. No setisfectory response from CC. Delivery service getting worse ..",
+        "reply": "[USER] I'm sorry, Lokendra. Did we miss the estimated delivery date? ^NK"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R034",
+    "message": "[USER] [USER] ..i ordered books from amazonindia on 23rd Nov. As a prime customer ,was promised to delivered on 24th nov but not delivered. Escalated the issue and again promised to delivered at 25th nov but yet i havent received the order...",
+    "reply": "[USER] I'm sorry you've not received your order. Let us have a closer look at this. Fill in your details here: [URL] & we'll assist you. Also, please don't provide your order details, we consider it to be personal info. Our page is visible to the public.^SF",
+    "evidence": [
+      {
+        "id": "1071040",
+        "message": "Items has not been delivered yet but order status delivered. So cancelled the order#[ORDER_ID]. [USER] [USER] [URL]",
+        "reply": "[USER] Please connect with our support team here: [URL] for any further assistance. ^HA [USER] Please don't provide your order details, we consider it personal information. Our Twitter page is visible to public. ^HA"
+      },
+      {
+        "id": "1223299",
+        "message": "[USER] Placed order 5th Oct. Due between 23rd Oct - 2nd Nov and still NOT dispatched? Ridiculous 😠",
+        "reply": "[USER] Was this sold directly by Amazon or by a third party seller? ^PK"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2309324",
+        "message": "[USER] [USER] Order date\n09-Nov-2017\nOrder no.\n[ORDER_ID]\nWhere's my order? You guranteed its delivery on 10th nov but today is 13th. No one in your org hasa damn clue about it. And im a prime member, to make matters worse. Poor stuff.",
+        "reply": "[USER] I'm sorry you've not received your order. Let us have a closer look at this. Fill in your details here: [URL] & we'll assist you. Also, please don't provide your order details, we consider it to be personal info. Our page is visible to the public.^SF"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R035",
+    "message": "[USER] wth I had order I was waiting for since Thursday and it was cancelled without ANY notification! First time that’s happened. ☹️",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "171010",
+        "message": "[USER] I cancelled an order but had already been charged for it. Any idea on when I'll see a refund?",
+        "reply": "[USER] This is not an actual charge, it is an authorization. Usually, this is released in 3 to 5 business days. For the best information regarding the release of an authorization, please contact your financial institution.  ^LM"
+      },
+      {
+        "id": "1741020",
+        "message": "Hey [USER] why have you cancelled my order? 😡\nOrder number: [ORDER_ID]",
+        "reply": "[USER] On order cancellation, we always send out an e-mail to your registered e-mail with Amazon. 1/2 ^CB [USER] Please don't provide your order details as we consider it personal info. Our twitter page is visible to public. 2/2^CB"
+      },
+      {
+        "id": "64214",
+        "message": "[USER] Been waiting for my order for over a week now, the first time it said it was “delivered” at 11:45pm 🤔 now the replacement said attempted delivery last night when I was sat in waiting all evening...customer service are useless.",
+        "reply": "[USER] Sorry to hear that, Dan. Can I ask what the latest tracking update has been? You can check here: [URL] ^TI"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R036",
+    "message": "[USER] #once again my orders all screwed up#deliver date misleading and invalid#losing your touch #demanding credit on all items",
+    "reply": "Could you confirm your estimated date of delivery? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2383159",
+        "message": "[USER] Delhivery has yet again screwed up and I can't even get in touch. Will probably have to refuse delivery if it doesn't come today.",
+        "reply": "[USER] Sorry for the inconvenience. Please contact our support team here: [URL] We will look into it and assist. ^GU"
+      },
+      {
+        "id": "396052",
+        "message": "So [USER] screwed up 3 out of 4 separate orders delivered to me, all today! A new personal best.",
+        "reply": "[USER] Sorry for the hassle Anant. Please report this to our support team here: [URL] and we'll check this. ^HN"
+      },
+      {
+        "id": "566567",
+        "message": "[USER] only 3 items out of 6 ordered on BF delivered. All 2 Day Prime, all shipped but still not delivered. New date every day. Tracking is useless. When do I get my items ?",
+        "reply": "[USER] We'd be happy to look into this with you over phone or chat here: [URL] ^RR"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R037",
+    "message": "[USER] versendet ihr heute Call of Duty WW2 oder erst morgen ! Weil das Spiel Freitag raus kommt 🙈😂 hoffe es kommt pünktlich an bei mir",
+    "reply": "[USER] Hi, ein gänzlicher Ausschluss ist leider nicht möglich. Das müsste dir aber eigentlich auch so in der Bestätigungsmail mitgeteilt worden sein. Wie lange ist die Abwahl denn her? ^MS",
+    "evidence": [
+      {
+        "id": "2599672",
+        "message": "Yay! Heute ist Erscheinungstag und nicht morgen. Danke für nichts [USER] .A. [URL]",
+        "reply": "[USER] Bitte entschuldige die Verspätung. Wir gehen dem gerne nach. Melde dich bitte über folgenden Link: [URL] Viele Grüße ^UK"
+      },
+      {
+        "id": "2770739",
+        "message": "[USER] Habt Ihr jetzt Mitarbeiter von [USER] angestellt oder wie kann es sein, das mein Paket bei einem Hausbewohner abgegeben wurde? Welcher Hausbewohner? Keine Nachricht, nichts! Aber vorher bei mir noch klingeln!!! #Sauer",
+        "reply": "[USER] Oje :( Schon mal im Haus rumgefragt? Leider kann ich über Twitter nicht nachsehen, aber meine Kollegen im Kundenservice sehen sich das gerne einmal an: [URL] Liebe Grüße ^MF"
+      },
+      {
+        "id": "2829489",
+        "message": "Moin [USER], [USER] sollte doch als Lieferant bei mir gestrichen werden!? Neue Bestellung kommt jetzt wieder mit #DHL... Warum?",
+        "reply": "[USER] Hi, ein gänzlicher Ausschluss ist leider nicht möglich. Das müsste dir aber eigentlich auch so in der Bestätigungsmail mitgeteilt worden sein. Wie lange ist die Abwahl denn her? ^MS"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R038",
+    "message": "[USER] versendet ihr heute Call of Duty WW2 oder erst morgen ! Weil das Spiel Freitag raus kommt 🙈😂 hoffe es kommt pünktlich an bei mir",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "2599672",
+        "message": "Yay! Heute ist Erscheinungstag und nicht morgen. Danke für nichts [USER] .A. [URL]",
+        "reply": "[USER] Bitte entschuldige die Verspätung. Wir gehen dem gerne nach. Melde dich bitte über folgenden Link: [URL] Viele Grüße ^UK"
+      },
+      {
+        "id": "2770739",
+        "message": "[USER] Habt Ihr jetzt Mitarbeiter von [USER] angestellt oder wie kann es sein, das mein Paket bei einem Hausbewohner abgegeben wurde? Welcher Hausbewohner? Keine Nachricht, nichts! Aber vorher bei mir noch klingeln!!! #Sauer",
+        "reply": "[USER] Oje :( Schon mal im Haus rumgefragt? Leider kann ich über Twitter nicht nachsehen, aber meine Kollegen im Kundenservice sehen sich das gerne einmal an: [URL] Liebe Grüße ^MF"
+      },
+      {
+        "id": "2829489",
+        "message": "Moin [USER], [USER] sollte doch als Lieferant bei mir gestrichen werden!? Neue Bestellung kommt jetzt wieder mit #DHL... Warum?",
+        "reply": "[USER] Hi, ein gänzlicher Ausschluss ist leider nicht möglich. Das müsste dir aber eigentlich auch so in der Bestätigungsmail mitgeteilt worden sein. Wie lange ist die Abwahl denn her? ^MS"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R039",
+    "message": "[USER] hasta cuando tendrán mirror mirror para envió 😭",
+    "reply": "Without providing personal or account information, could you tell us more about what's going on? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1201203",
+        "message": "Y cuando en [USER] todo era genial se inventaron Amazon Logistics para fasridiarlo todo. Que desastre de servicio. Fatal.",
+        "reply": "[USER] Hola, lamento cualquier inconveniente, ¿ Podrías informarme si tienes algún pedido pendiente de entrega? ^AZ"
+      },
+      {
+        "id": "2721796",
+        "message": "o site da [USER] não está abrindo para mim. para vocês está?",
+        "reply": "[USER] Está sim Alexandre. Já tentou em outro navegador ou outro dispositivo? ^JD"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "602336",
+        "message": "cuando [USER] perdio mi paquete [URL]",
+        "reply": "[USER] Hola Eduardo, lamentamos los inconvenientes que hayas tenido. Puedes indicarnos ¿en este momento tienes algún pedido pendiente de entrega? Estaremos encantados de ayudarte. ^MZ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R040",
+    "message": "Nice one [USER] delivered my parcel to a neighbour but no indication which neighbour! #huntthedelivery",
+    "reply": "Could you confirm your estimated date of delivery? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "164885",
+        "message": "[USER] hey guys! Had an issue with a order that I asked to be delivered to a neighbour but was posted through letter box and is now destroyed by dog.",
+        "reply": "[USER] Hello Ella! I'm terribly sorry to hear this has happened! Since we do not have account access over social media, we'd be more than happy to help w/ this issue via phone or chat here: [URL] ^TM"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2471704",
+        "message": "[USER] is there a way to have a parcel NOT go to a neighbour and ONLY to my safe place?",
+        "reply": "[USER] I'm sorry your parcel wasn't left at your safe place! Please reach out to us via phone/chat here: [URL] and we can help with this. \n-Joshua"
+      },
+      {
+        "id": "2552211",
+        "message": "[USER] i specifically asked for an order not to go to my neighbour and it has!",
+        "reply": "[USER] I'm so sorry your order wasn't left at your safe place, Mark! We'd like to look into this for you and make sure this is reported to the courier. In order for us to do so, please reach out to us here: [URL] ^WJ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R041",
+    "message": "[USER] [USER] tired amazon pantry and this is how my items ended up. They were spilled everywhere too. [URL]",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1037140",
+        "message": "[USER] Ordered 24th, Prime items, in stock, Prime one day delivery. Email: your items will be delivered on 28th. How’s that work?",
+        "reply": "[USER] Apologies for any concern, Chris! Selecting One-Day shipping will reduce the transit time after we've shipped your order, but it won't impact how long it takes us to obtain the item or prepare it for shipment: [URL] I hope this is helpful! ^SD"
+      },
+      {
+        "id": "1279770",
+        "message": "[USER] First time I had this problem but Vegas sent all my pantry items like this.  Rcvd 10/26 [URL]",
+        "reply": "[USER] 😔 We're always looking to improve! Please share your concerns: [URL] Let us know if anything was damaged! ^FR"
+      },
+      {
+        "id": "61042",
+        "message": "ah nuts\nforgot to cancel amazon prime before the trial period ended\ni bet that's how they get like half of their subs",
+        "reply": "[USER] We'd love to help! If you'd like to cancel your Prime membership, you can do so here: [URL] ^AC"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R042",
+    "message": "Nice one [USER] delivered my parcel to a neighbour but no indication which neighbour! #huntthedelivery",
+    "reply": "[USER] I'm sorry your parcel wasn't left at your safe place! Please reach out to us via phone/chat here: [URL] and we can help with this. \n-Joshua",
+    "evidence": [
+      {
+        "id": "164885",
+        "message": "[USER] hey guys! Had an issue with a order that I asked to be delivered to a neighbour but was posted through letter box and is now destroyed by dog.",
+        "reply": "[USER] Hello Ella! I'm terribly sorry to hear this has happened! Since we do not have account access over social media, we'd be more than happy to help w/ this issue via phone or chat here: [URL] ^TM"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2471704",
+        "message": "[USER] is there a way to have a parcel NOT go to a neighbour and ONLY to my safe place?",
+        "reply": "[USER] I'm sorry your parcel wasn't left at your safe place! Please reach out to us via phone/chat here: [URL] and we can help with this. \n-Joshua"
+      },
+      {
+        "id": "2552211",
+        "message": "[USER] i specifically asked for an order not to go to my neighbour and it has!",
+        "reply": "[USER] I'm so sorry your order wasn't left at your safe place, Mark! We'd like to look into this for you and make sure this is reported to the courier. In order for us to do so, please reach out to us here: [URL] ^WJ"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R043",
+    "message": "[USER] Abend ne frage ich habe COD Ww2 vorbestellt und wird versendet am 30.10. heißt das wirklich das es bei mir am 3.11 da ist?!",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "2499127",
+        "message": "[USER] Hi,habe da eine Frage.Habe mir Pokémon Ultrasonne/Mond Dual Pack bestellt,welches am Fr ankommen soll.Nun stand dort heute aber versand am 18.11 und Zustellung DIENSTAG. Habe dann auf Premiumversand gestellt und schon steht dort wieder das normale Datum.",
+        "reply": "[USER] Während der Vorbestellzeit wirst du auf der Produktseite des jeweiligen Artikels informiert, welche Versandart du wählen musst, um die Lieferung noch am Erscheinungstag zu erhalten. Ein Update zu deiner Bestellung erhältst du spätestens mit der Versandbestätigung. ^SI"
+      },
+      {
+        "id": "2539602",
+        "message": "Ich habe seit heute Amazon Prime Video, das heißt: Ich kann die #Bundesliga auf #Eurosport schauen.",
+        "reply": "[USER] Du kannst diese über Amazon Channels buchen. Guck mal hier: [URL] Ganz lieber Gruß ^TG"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "622598",
+        "message": "Sagt mal [USER], zählt das als Retoure wenn ich mir Paketband bei euch bestelle und das Stück für Stück bei meinen Rücksendungen an euch zurückschicke? 🤔😁",
+        "reply": "[USER] Wenn du damit andere Päckchen für uns zuklebst ja, sonst hätten wir das lieber am Stück zurück ;) Mal ganz davon abgesehen, die Päckchen sollen zu dir, nicht zu uns! ^AN"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R044",
+    "message": "[USER] customer service degrading my order in dispatched status from last 5 days which was returned. Reg mobile number [NUMBER]",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "2336091",
+        "message": "[USER] your customer service is 💯🤙🏻",
+        "reply": "[USER] Thanks for the shout out! We think you're the bee's knees! ^EP"
+      },
+      {
+        "id": "339476",
+        "message": "[USER] where is your customer service number??? 😩😤😡",
+        "reply": "[USER] We're here to help, if we can, or you can reach us best by phone or chat here: [URL] ^AM"
+      },
+      {
+        "id": "937333",
+        "message": "Last 4thOctober I returned an order. But so far no refund has come to me.This service can not be expected from you.\n[USER] [USER]",
+        "reply": "[USER] I'm sorry about the delay in refund. Kindly connect with us here: [URL] we'd like to help. ^SG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R045",
+    "message": "[USER] please come up with a policy for exchange of old kindle to a newer version in India region..am a prime member and really enjoying the shopping experience with #amazon",
+    "reply": "[USER] Hello, have you tried resetting the device ? ^CR",
+    "evidence": [
+      {
+        "id": "222607",
+        "message": "Want to buy 10 or E with exchange but exchange is not available in my PIN code is there is other way [USER] I really want this",
+        "reply": "[USER] I understand your concern, please contact us here: [URL] so that we can assist you accordingly. ^SP"
+      },
+      {
+        "id": "226423",
+        "message": "[USER] android Alexa app says new version with calling available but play store installs old version?",
+        "reply": "[USER] Hello, have you tried resetting the device ? ^CR"
+      },
+      {
+        "id": "2663196",
+        "message": "[USER] I'm a prime member from India. Could you please let me know when Prime Music will be launched for prime users?",
+        "reply": "[USER] Amazon Prime Music will be available to Indian Prime Members exclusively on echo devices starting 10/31/17 and in near future would be available across other devices & operating systems including Android, IOS, Fire TV , PC etc. Kindly stay tuned. ^PS"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R046",
+    "message": "[USER] please come up with a policy for exchange of old kindle to a newer version in India region..am a prime member and really enjoying the shopping experience with #amazon",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "222607",
+        "message": "Want to buy 10 or E with exchange but exchange is not available in my PIN code is there is other way [USER] I really want this",
+        "reply": "[USER] I understand your concern, please contact us here: [URL] so that we can assist you accordingly. ^SP"
+      },
+      {
+        "id": "226423",
+        "message": "[USER] android Alexa app says new version with calling available but play store installs old version?",
+        "reply": "[USER] Hello, have you tried resetting the device ? ^CR"
+      },
+      {
+        "id": "2663196",
+        "message": "[USER] I'm a prime member from India. Could you please let me know when Prime Music will be launched for prime users?",
+        "reply": "[USER] Amazon Prime Music will be available to Indian Prime Members exclusively on echo devices starting 10/31/17 and in near future would be available across other devices & operating systems including Android, IOS, Fire TV , PC etc. Kindly stay tuned. ^PS"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R047",
+    "message": "[USER] [USER] ..i ordered books from amazonindia on 23rd Nov. As a prime customer ,was promised to delivered on 24th nov but not delivered. Escalated the issue and again promised to delivered at 25th nov but yet i havent received the order...",
+    "reply": "Could you confirm your estimated date of delivery? Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1071040",
+        "message": "Items has not been delivered yet but order status delivered. So cancelled the order#[ORDER_ID]. [USER] [USER] [URL]",
+        "reply": "[USER] Please connect with our support team here: [URL] for any further assistance. ^HA [USER] Please don't provide your order details, we consider it personal information. Our Twitter page is visible to public. ^HA"
+      },
+      {
+        "id": "1223299",
+        "message": "[USER] Placed order 5th Oct. Due between 23rd Oct - 2nd Nov and still NOT dispatched? Ridiculous 😠",
+        "reply": "[USER] Was this sold directly by Amazon or by a third party seller? ^PK"
+      },
+      {
+        "id": "2217276",
+        "message": ".[USER] Not happy with delivery services. Despite of being my order arriving in Ahbd yesterday. Still not delivered to me.",
+        "reply": "[USER] Sorry to know about the delay. Could you confirm your estimated date of delivery? ^MS"
+      },
+      {
+        "id": "2309324",
+        "message": "[USER] [USER] Order date\n09-Nov-2017\nOrder no.\n[ORDER_ID]\nWhere's my order? You guranteed its delivery on 10th nov but today is 13th. No one in your org hasa damn clue about it. And im a prime member, to make matters worse. Poor stuff.",
+        "reply": "[USER] I'm sorry you've not received your order. Let us have a closer look at this. Fill in your details here: [URL] & we'll assist you. Also, please don't provide your order details, we consider it to be personal info. Our page is visible to the public.^SF"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R048",
+    "message": "[USER] how can I see when my prime account is due for renewal?",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1033194",
+        "message": "[USER] order processed and shipped ,then cancelled due to payment error. Amount has been deducted from my account.",
+        "reply": "[USER] I am sorry about the cancellation of your order. However, the refund will be processed to your original payment (1/2)^SF [USER] method in 3-5 business days for the amount deducted. You may check the refund status here: [URL] (2/2)^SF"
+      },
+      {
+        "id": "1242823",
+        "message": "[USER] how do I change the email address associated with an account when I no longer have access to that email account!",
+        "reply": "[USER] If you have access to your [URL] account, you can change your email address here: [URL] ^JP"
+      },
+      {
+        "id": "2467647",
+        "message": "[USER] My Prime order was due for delivery by 9pm today.Been in all day waiting, and no delivery. Disappointed.",
+        "reply": "[USER] I'm very sorry for this delay with your order's delivery. Let us look into this with you here: [URL] ^DO"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R049",
+    "message": "[USER] promised 1 day prime delivery but finally delivered in 4 days! Itz amusing tht they always hv problems with every delivery of mine",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1033038",
+        "message": "[USER] how is mine delayed, but I can order another for delivery today? Should I cancel and rebuy? [URL]",
+        "reply": "[USER] The most accurate delivery date would be at checkout. Have you placed it in your cart & added shipping address yet, Nolan? ^FR"
+      },
+      {
+        "id": "1205861",
+        "message": "[USER] we've placed return for an order since long & were promised tht the item would be collected 2 days ago. No one has come yet.",
+        "reply": "[USER] Kindly get in touch with us here: [URL] and we’ll be glad to help you. ^AG"
+      },
+      {
+        "id": "421511",
+        "message": "I choose 2 day delivery option but product not receive in 2 days it takes 5 days even after I m prime member [USER] [USER] [URL]",
+        "reply": "[USER] Sorry that you feel that way. But did we happen to miss the estimated delivery date for your order? ^HR"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R050",
+    "message": "[USER] loved echo dot, ordered products, played songs, booked Ola just with voice!",
+    "reply": "[USER] Hi, sorry to hear that. How far is the Echo place from your router? Is it connected to the 2.4GHz or 5GHz band? ^JJ",
+    "evidence": [
+      {
+        "id": "1416445",
+        "message": "[USER] how do I pair my Fire TV stick with d Echo Dot so I can play shows with voice commands?It doesn't show up in d devices list",
+        "reply": "[USER] Keep checking the Echo page for new devices that will support Echo Dot. ^VM"
+      },
+      {
+        "id": "288021",
+        "message": "[USER] bought an echo and a dot , the dot is perfect but my echo drops connection every 2 days & i have to go thru set up again , help",
+        "reply": "[USER] Hi, sorry to hear that. How far is the Echo place from your router? Is it connected to the 2.4GHz or 5GHz band? ^JJ"
+      },
+      {
+        "id": "453314",
+        "message": "[USER] hello,my echo dot has stopped connecting Bluetooth devices,the app pairs with a device but the echo dot says device not found",
+        "reply": "[USER] Thanks for contacting us over Twitter. Let's try these troubleshooting steps here: [URL] and please let us know if the issue continues. ^GG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R051",
+    "message": "[USER] I had won in your #apptreasurehunt on 29th September but I haven't received the prize for it as of now. please let me know abt it",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1037411",
+        "message": ".[USER] Is there any issue with the mobile App. It is not diagnosing the phone. Stuck at Start diagnostics page.",
+        "reply": "[USER] That's strange, Dikshit. Could you tell us what error you're seeing while opening the app? ^NK"
+      },
+      {
+        "id": "1420501",
+        "message": "[USER] hello my account won’t let me be a prime membership can you help?",
+        "reply": "[USER] I'm sorry for the account trouble, Kimberley! Are you getting an error when trying to sign up: [URL] ^SD"
+      },
+      {
+        "id": "843521",
+        "message": "[USER] received the prize but the amazon gV is  not working... I can't add it to my account [URL]",
+        "reply": "[USER] I am sorry to hear this. Can I ask for you to reach out to us using the link below so we can investigate this for you: [URL]"
+      },
+      {
+        "id": "977316",
+        "message": "Hi [USER]  - I still haven't got my prize iPhone 7 and it's been more than 10 days now. Plz help what should I do ? [USER] [URL]",
+        "reply": "[USER] We've responded to you via DM please refer. ^AG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R052",
+    "message": "[USER] I used amazon pay to place an order for the first time but I didn't get 15% cashback. Please solve my problem",
+    "reply": "Thanks for reaching out. A support representative needs to review this request.",
+    "evidence": [
+      {
+        "id": "1208366",
+        "message": "Hi! [USER] is there any chance to get support from you in english? I need to solve a problem!!!",
+        "reply": "[USER] How can we help you? What's the problem? Kind regards ^MF"
+      },
+      {
+        "id": "2866115",
+        "message": "[USER] How do I solve this? [URL]",
+        "reply": "[USER] Please try these tips, and let us know if it helps: [URL] ^BH"
+      },
+      {
+        "id": "504968",
+        "message": "Not so funny now [USER] totally useless on phone.",
+        "reply": "[USER] I'm sorry for the poor experience! Without providing personal or account information, could you tell us more about what's going on? We'd like to help, if possible. ^ML"
+      },
+      {
+        "id": "832136",
+        "message": "[USER] \nVery dissapointing [USER] showing item delivered but not delivered yet and didn't get my refund also nd not for first time [URL]",
+        "reply": "[USER] I'm sorry the tracking has been updated as delivered even though you haven't received the product. This could 1/3 ^SH [USER] be due to incorrect tracking scan update. Kindly contact our support team here: [URL] and we'll 2/3 ^SH [USER] be happy to help. 3/3 ^SH"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R053",
+    "message": "[USER] I placed a per-order for Xanathar's Guide To Everything back in July and I gotta I am beyond annoyed that the pre-order was never fulfilled. The book hasn't even been dispatched. What's going on? [USER] [USER] [USER]",
+    "reply": "[USER] I'm sorry your order is delayed. Unforeseen circumstances can cause delays. Have we reached out to UPS to find out the reason for the delay? ^BE",
+    "evidence": [
+      {
+        "id": "1022874",
+        "message": "[USER] I placed an order but I guess it hasn't placed & your customer service isn't responding",
+        "reply": "[USER] That's unusual. We'd like to check this, kindly connect with us here: [URL] ^JS"
+      },
+      {
+        "id": "1387295",
+        "message": "[USER] why hasn't my order been shipped yet it was released yesterday annoyed yet again",
+        "reply": "[USER] Hi, what is the tracking information showing on your parcel ?You can check here : [URL] ^CR"
+      },
+      {
+        "id": "2380842",
+        "message": "I am beyond LIVID! What is the point of Amazon Prime when your order is going to be a week late? Literally BULL, [USER] [URL]",
+        "reply": "[USER] I'm sorry your order is delayed. Unforeseen circumstances can cause delays. Have we reached out to UPS to find out the reason for the delay? ^BE"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R054",
+    "message": "[USER] loved echo dot, ordered products, played songs, booked Ola just with voice!",
+    "reply": "Thanks for getting in touch about your product issue. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1416445",
+        "message": "[USER] how do I pair my Fire TV stick with d Echo Dot so I can play shows with voice commands?It doesn't show up in d devices list",
+        "reply": "[USER] Keep checking the Echo page for new devices that will support Echo Dot. ^VM"
+      },
+      {
+        "id": "288021",
+        "message": "[USER] bought an echo and a dot , the dot is perfect but my echo drops connection every 2 days & i have to go thru set up again , help",
+        "reply": "[USER] Hi, sorry to hear that. How far is the Echo place from your router? Is it connected to the 2.4GHz or 5GHz band? ^JJ"
+      },
+      {
+        "id": "453314",
+        "message": "[USER] hello,my echo dot has stopped connecting Bluetooth devices,the app pairs with a device but the echo dot says device not found",
+        "reply": "[USER] Thanks for contacting us over Twitter. Let's try these troubleshooting steps here: [URL] and please let us know if the issue continues. ^GG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R055",
+    "message": "[USER] I had won in your #apptreasurehunt on 29th September but I haven't received the prize for it as of now. please let me know abt it",
+    "reply": "[USER] I am sorry to hear this. Can I ask for you to reach out to us using the link below so we can investigate this for you: [URL]",
+    "evidence": [
+      {
+        "id": "1037411",
+        "message": ".[USER] Is there any issue with the mobile App. It is not diagnosing the phone. Stuck at Start diagnostics page.",
+        "reply": "[USER] That's strange, Dikshit. Could you tell us what error you're seeing while opening the app? ^NK"
+      },
+      {
+        "id": "1420501",
+        "message": "[USER] hello my account won’t let me be a prime membership can you help?",
+        "reply": "[USER] I'm sorry for the account trouble, Kimberley! Are you getting an error when trying to sign up: [URL] ^SD"
+      },
+      {
+        "id": "843521",
+        "message": "[USER] received the prize but the amazon gV is  not working... I can't add it to my account [URL]",
+        "reply": "[USER] I am sorry to hear this. Can I ask for you to reach out to us using the link below so we can investigate this for you: [URL]"
+      },
+      {
+        "id": "977316",
+        "message": "Hi [USER]  - I still haven't got my prize iPhone 7 and it's been more than 10 days now. Plz help what should I do ? [USER] [URL]",
+        "reply": "[USER] We've responded to you via DM please refer. ^AG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R056",
+    "message": "[USER] I placed a per-order for Xanathar's Guide To Everything back in July and I gotta I am beyond annoyed that the pre-order was never fulfilled. The book hasn't even been dispatched. What's going on? [USER] [USER] [USER]",
+    "reply": "Thanks for getting in touch about your delivery issue. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "1022874",
+        "message": "[USER] I placed an order but I guess it hasn't placed & your customer service isn't responding",
+        "reply": "[USER] That's unusual. We'd like to check this, kindly connect with us here: [URL] ^JS"
+      },
+      {
+        "id": "1387295",
+        "message": "[USER] why hasn't my order been shipped yet it was released yesterday annoyed yet again",
+        "reply": "[USER] Hi, what is the tracking information showing on your parcel ?You can check here : [URL] ^CR"
+      },
+      {
+        "id": "2380842",
+        "message": "I am beyond LIVID! What is the point of Amazon Prime when your order is going to be a week late? Literally BULL, [USER] [URL]",
+        "reply": "[USER] I'm sorry your order is delayed. Unforeseen circumstances can cause delays. Have we reached out to UPS to find out the reason for the delay? ^BE"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R057",
+    "message": "[USER] how can I see when my prime account is due for renewal?",
+    "reply": "[USER] If you have access to your [URL] account, you can change your email address here: [URL] ^JP",
+    "evidence": [
+      {
+        "id": "1033194",
+        "message": "[USER] order processed and shipped ,then cancelled due to payment error. Amount has been deducted from my account.",
+        "reply": "[USER] I am sorry about the cancellation of your order. However, the refund will be processed to your original payment (1/2)^SF [USER] method in 3-5 business days for the amount deducted. You may check the refund status here: [URL] (2/2)^SF"
+      },
+      {
+        "id": "1242823",
+        "message": "[USER] how do I change the email address associated with an account when I no longer have access to that email account!",
+        "reply": "[USER] If you have access to your [URL] account, you can change your email address here: [URL] ^JP"
+      },
+      {
+        "id": "2467647",
+        "message": "[USER] My Prime order was due for delivery by 9pm today.Been in all day waiting, and no delivery. Disappointed.",
+        "reply": "[USER] I'm very sorry for this delay with your order's delivery. Let us look into this with you here: [URL] ^DO"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R058",
+    "message": "[USER] versendet ihr heute Call of Duty WW2 oder erst morgen ! Weil das Spiel Freitag raus kommt 🙈😂 hoffe es kommt pünktlich an bei mir",
+    "reply": "Thanks for getting in touch about your request. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "2599672",
+        "message": "Yay! Heute ist Erscheinungstag und nicht morgen. Danke für nichts [USER] .A. [URL]",
+        "reply": "[USER] Bitte entschuldige die Verspätung. Wir gehen dem gerne nach. Melde dich bitte über folgenden Link: [URL] Viele Grüße ^UK"
+      },
+      {
+        "id": "2770739",
+        "message": "[USER] Habt Ihr jetzt Mitarbeiter von [USER] angestellt oder wie kann es sein, das mein Paket bei einem Hausbewohner abgegeben wurde? Welcher Hausbewohner? Keine Nachricht, nichts! Aber vorher bei mir noch klingeln!!! #Sauer",
+        "reply": "[USER] Oje :( Schon mal im Haus rumgefragt? Leider kann ich über Twitter nicht nachsehen, aber meine Kollegen im Kundenservice sehen sich das gerne einmal an: [URL] Liebe Grüße ^MF"
+      },
+      {
+        "id": "2829489",
+        "message": "Moin [USER], [USER] sollte doch als Lieferant bei mir gestrichen werden!? Neue Bestellung kommt jetzt wieder mit #DHL... Warum?",
+        "reply": "[USER] Hi, ein gänzlicher Ausschluss ist leider nicht möglich. Das müsste dir aber eigentlich auch so in der Bestätigungsmail mitgeteilt worden sein. Wie lange ist die Abwahl denn her? ^MS"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R059",
+    "message": "Well [USER] Flex missed another delivery schedule. That's 5 delayed or lost pkgs out of 14. While USPS & UPS are 0 loss/delayed out of nearly 100 pkgs delivered. Postman even found 1 pkg in bushes that Flex \"delivered\". \nSeems Flex QoS varys radically. Bad sig-to-noise ratio. [URL]",
+    "reply": "[USER] I'm sorry the order arrived late! Please submit your order details here: [URL] so we can take a closer look ^TN",
+    "evidence": [
+      {
+        "id": "1480838",
+        "message": "Everyone is getting their Amazon Echo while Amazon has delayed the delivery of mine to Monday 😢😢😢😭",
+        "reply": "[USER] We understand your excitement. Sorry for the delay. Kindly wait until the revised estimated delivery date. ^NS"
+      },
+      {
+        "id": "1774000",
+        "message": "Ok apparently with Amazon Flex they have the driver take a picture of my house to let me know my package was delivered. NO THANKS. Go back to using UPS so my shit will arrive at 5 instead of 9 at fuckin night",
+        "reply": "[USER] I'm sorry the order arrived late! Please submit your order details here: [URL] so we can take a closer look ^TN"
+      },
+      {
+        "id": "2974894",
+        "message": "[USER] via #UPS 3 days ago: “your package is out for delivery.”\nUPS now: “a carrier delay has occurred.....” loosely translated: “we have no idea where your pkg is.....”",
+        "reply": "[USER] I'm very sorry for the delay. Whenever you have a chance, reach out to us here: [URL] We'd be happy to look into options in real-time with you. ^SK"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  },
+  {
+    "review_id": "R060",
+    "message": "[USER] customer service degrading my order in dispatched status from last 5 days which was returned. Reg mobile number [NUMBER]",
+    "reply": "Thanks for getting in touch about your return or cancellation request. A support representative will need to review this. Please keep personal and order details out of public replies.",
+    "evidence": [
+      {
+        "id": "2336091",
+        "message": "[USER] your customer service is 💯🤙🏻",
+        "reply": "[USER] Thanks for the shout out! We think you're the bee's knees! ^EP"
+      },
+      {
+        "id": "339476",
+        "message": "[USER] where is your customer service number??? 😩😤😡",
+        "reply": "[USER] We're here to help, if we can, or you can reach us best by phone or chat here: [URL] ^AM"
+      },
+      {
+        "id": "937333",
+        "message": "Last 4thOctober I returned an order. But so far no refund has come to me.This service can not be expected from you.\n[USER] [USER]",
+        "reply": "[USER] I'm sorry about the delay in refund. Kindly connect with us here: [URL] we'd like to help. ^SG"
+      }
+    ],
+    "grounding": "",
+    "relevance": "",
+    "safety": "",
+    "clarity": "",
+    "reason": "",
+    "annotator": ""
+  }
+]
