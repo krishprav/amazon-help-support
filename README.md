@@ -97,12 +97,6 @@ python3 src/support.py prepare --input /absolute/path/to/twcs.csv --brand Amazon
 
 That writes blank train/dev/test labels. Completed gold lives in `data/gold.csv`.
 
-## What’s included
-
-Included: gold labels, blind ratings, cached predictions, and scored metrics.
-
-Not included: `.env`, API keys, `results/judge_cache/`, the original `twcs.csv`, or `results/judge.json`. A live judge run scored 3 of 60 replies, then the provider returned HTTP 405. The remaining scores were not invented.
-
 ## Layout
 
 - `src/support.py`: importer, cleaning, retrieval and agent
