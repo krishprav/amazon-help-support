@@ -50,6 +50,13 @@ class AnnotateTests(unittest.TestCase):
  def test_mapping_helper_is_blocked(self):
   with self.assertRaisesRegex(RuntimeError,'review_mapping'):
    load_mapping_blocked()
+ def test_packaged_ratings_resume_without_message_column(self):
+  buf=io.StringIO()
+  main(['rates','--name','CB','--out','data/human_ratings.csv','--blind','review/blind_replies.json','--gold','data/gold.csv'], io_in=io.StringIO(), io_out=buf)
+  self.assertIn('60/60', buf.getvalue())
+  self.assertNotIn('review_mapping', buf.getvalue())
+  row=read('data/human_ratings.csv')[0]
+  self.assertNotIn('message', row)
 
 if __name__=='__main__':
  unittest.main()

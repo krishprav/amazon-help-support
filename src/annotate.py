@@ -135,8 +135,12 @@ def ratings(a, io_in=sys.stdin, io_out=sys.stdout):
     for item in blind:
         prev = existing.get(item['review_id'])
         if prev and complete_rating(prev):
-            if prev.get('message') not in ('', item['message']) and prev.get('message') != item['message']:
+            stored_msg=(prev.get('message') or '').strip()
+            stored_reply=prev.get('reply') or ''
+            if stored_msg and stored_msg!=item['message']:
                 raise ValueError(f'Existing rating message changed for {item["review_id"]}')
+            if stored_reply and stored_reply!=item['reply']:
+                raise ValueError(f'Existing rating reply changed for {item["review_id"]}')
             rows.append(prev)
             continue
         rows.append({
@@ -175,14 +179,15 @@ def ratings(a, io_in=sys.stdin, io_out=sys.stdout):
         if not reason:
             io_out.write('Reason required; skipped.\n')
             continue
-        row.update(**scores, reason=reason, annotator=a.name, label_source='human')
+        row.update(**scores, message=item['message'], reply=item['reply'], reason=reason, annotator=a.name, label_source='human')
         write(out_path, rows)
         write_rating_provenance(a.blind, out_path, 'cli')
-    write(out_path, rows)
-    write_rating_provenance(a.blind, out_path, 'cli')
+    if pending:
+        write(out_path, rows)
+        write_rating_provenance(a.blind, out_path, 'cli')
     done = sum(complete_rating(r) for r in rows)
     io_out.write(f'Saved {done}/{len(rows)} ratings to {out_path}\n')
-    if done == len(rows) and Path(a.gold).exists() and sum(complete_gold(r) for r in read(a.gold)) == 200:
+    if pending and done == len(rows) and Path(a.gold).exists() and sum(complete_gold(r) for r in read(a.gold)) == 200:
         freeze_provenance(a.gold, out_path, a.test, a.blind, 'cli')
         io_out.write('Wrote data/human_provenance.json\n')
     return done

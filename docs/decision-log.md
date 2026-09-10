@@ -15,4 +15,7 @@
 13. Give each system the same evidence packet during judging. Empty evidence for the trivial baseline would unfairly confound model identity and grounding.
 14. Report undefined unsafe-auto rate when coverage is zero, and undefined kappa for degenerate ratings. Avoid presenting absence of measurement as perfection.
 15. Keep human review blank and fail when required evidence is missing. A completed-looking report with fabricated labels would defeat the point of the assignment.
-16. Do not invent LLM-judge scores when the HTTPS provider blocks. An incomplete `results/judge.json` is not a completed evaluation; cached hits may resume later.
+16. Call the judge with Python’s urllib client, not an extra `curl` binary. A provider HTTP 405 is a missing-evidence failure, not a reason to invent scores.
+17. Refuse to overwrite an existing review workbook unless `--force` is passed. Regenerating the blank template after labelling would destroy work.
+18. Treat packaged ratings without a stored message column as valid if scores are complete; check optional stored text against the blind packet rather than crashing.
+19. Treat `workflow.py check` as a full artifact comparison: every scored statistic, unchanged gold customer groups, complete training-only review evidence, and the current judge rubric hash.

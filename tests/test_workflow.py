@@ -1,11 +1,11 @@
-import argparse,contextlib,io,json,os,sys,tempfile,unittest
+import argparse,contextlib,io,json,os,sys,tempfile,unittest,urllib.error
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,'src')
 from support import clean,Retriever,predict,normalized
-from workflow import isolation,human_labels
+from workflow import isolation,human_labels,verify_gold_matches_test,verify_review_evidence,METRIC_KEYS,AGREEMENT_KEYS
 from evaluation import score,agreement,wilson,system_rating_summary
-from judge import validate_rating,run,parse_model_json,models_to_try
+from judge import validate_rating,run,parse_model_json,models_to_try,http_post
 
 class WorkflowTests(unittest.TestCase):
  def row(self,**kw):
@@ -98,6 +98,32 @@ class WorkflowTests(unittest.TestCase):
     self.assertIn(p,data['missing_files'])
   if data['missing_files']:
    self.assertEqual(code,2)
+ def test_gold_customer_group_must_match_test(self):
+  with self.assertRaisesRegex(ValueError,'customer group'):
+   verify_gold_matches_test([self.row()],[self.row(group='other-customer')])
+ def test_review_evidence_must_be_training(self):
+  bundle=json.loads(Path('results/predictions.json').read_text())
+  with self.assertRaisesRegex(ValueError,'training'):
+   verify_review_evidence([], bundle)
+ def test_reported_score_fields_are_all_checked(self):
+  m=score([self.row()],[{'intent':'delivery','escalate':1}])
+  self.assertEqual(set(METRIC_KEYS), set(m)-{'per_intent','confusion_matrix'})
+  self.assertEqual(set(AGREEMENT_KEYS), set(agreement([(1,2),(5,5)])))
+ def test_judge_http_uses_urllib(self):
+  class Fake(io.BytesIO):
+   def __enter__(self): return self
+   def __exit__(self,*a): return False
+  payload={'ok':1}
+  with patch.dict(os.environ, {'JUDGE_USE_CURL':'1'}):
+   with patch('judge.urllib.request.urlopen', return_value=Fake(json.dumps(payload).encode())) as opener:
+    self.assertEqual(http_post('https://example.com/v1', 'k', {'a':1}), payload)
+    opener.assert_called_once()
+ def test_judge_http_405_is_visible(self):
+  from email.message import Message
+  err=urllib.error.HTTPError('https://example.com', 405, 'Not Allowed', Message(), io.BytesIO(b'waf'))
+  with patch('judge.urllib.request.urlopen', side_effect=err):
+   with self.assertRaisesRegex(RuntimeError, 'HTTP 405'):
+    http_post('https://example.com', 'k', {'a':1})
  def test_forged_minimal_metrics_detected(self):
   import workflow
   gold=[self.row(id=str(i),group=f'g{i}') for i in range(150)]

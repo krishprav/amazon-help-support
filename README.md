@@ -41,11 +41,16 @@ python3 src/annotate.py status
 
 Complete gold before ratings. The rater CLI never opens `review/review_mapping.json` or judge scores.
 
-`review/human-review.xlsx` is a blank template. Fill **Gold labels** (200 rows) then **Reply ratings** (60 rows). Use the **Guide** and **Evidence** tabs. Do not inspect model identities first.
+`review/human-review.xlsx` is a blank template generated **before** labelling. Do not run the generator on a filled workbook. To rebuild a blank copy:
 
 ```bash
-python3 src/workbook.py
-python3 src/import_review.py review/human-review.xlsx
+python3 src/workbook.py --output /tmp/human-review.xlsx
+```
+
+The generator refuses to overwrite an existing file unless you pass `--force`. After filling Gold labels then Reply ratings, import:
+
+```bash
+python3 src/import_review.py path/to/filled.xlsx
 ```
 
 Import checks IDs, unchanged message/draft text, the Evidence tab, and evidence-ID association. Names are self-attestations.
@@ -54,7 +59,7 @@ Protocol: [docs/annotation.md](docs/annotation.md).
 
 ## LLM judge
 
-Chat Completions over HTTPS. `.env.example` documents variables and is not autoloaded. Never commit keys.
+Chat Completions over HTTPS using Python’s standard library (`urllib`). `.env.example` documents variables and is not autoloaded. Never commit keys. The reported offline agent needs no `curl` and no API.
 
 ```bash
 export JUDGE_BASE_URL='https://agentrouter.org/v1'
@@ -65,7 +70,7 @@ export JUDGE_API_KEY
 python3 src/judge.py
 ```
 
-Some providers reject Python’s default User-Agent. Content-filter blocks retry `JUDGE_FALLBACK_MODELS`. HTTP 429 and 5xx get bounded retries. Invalid JSON is not turned into a score.
+Some providers reject Python’s default User-Agent; set `JUDGE_USER_AGENT` as above. Content-filter blocks retry fallback models, then retry with historical tweet text omitted. HTTP 429 and 5xx get bounded retries. HTTP 405 means the provider blocked this client or network; scores are not invented. Invalid JSON is not turned into a score.
 
 Optional LLM drafting (`python3 src/workflow.py generate --llm --output results/llm_predictions.json`) is a side experiment, not the reported system.
 

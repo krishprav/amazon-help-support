@@ -141,6 +141,9 @@ def run(a):
         raise ValueError('Workbook expects the 60-reply blind cohort')
     if {r['intent'] for r in test} - {''} or {r['escalate'] for r in test} - {''}:
         raise ValueError('Test file already contains labels; refusing to copy them into a blank workbook')
+    out = Path(a.output)
+    if out.exists() and not a.force:
+        raise ValueError(f'Refusing to overwrite {a.output}; pass --force to replace a blank template')
     write_xlsx(a.output, build(test, blind))
     print(json.dumps({'output': a.output, 'gold_rows': 200, 'rating_rows': 60, 'intents': INTENTS}))
 
@@ -149,6 +152,7 @@ def main():
     p.add_argument('--test', default='data/test.csv')
     p.add_argument('--blind', default='review/blind_replies.json')
     p.add_argument('--output', default='review/human-review.xlsx')
+    p.add_argument('--force', action='store_true', help='Replace an existing workbook')
     run(p.parse_args())
 
 if __name__ == '__main__':

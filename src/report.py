@@ -53,29 +53,24 @@ def main():
             lines+=system_table('Judge mean scores by system:', ag['systems']['judge'])
         lines+=['','Sixty replies share 20 customer contexts, so agreement is descriptive rather than a population guarantee.','']
     elif human_systems:
-        lines+=['Human ratings exist for the 60-reply cohort. A live judge scored three cached replies, then the provider returned HTTP 405 on later POSTs. Remaining judge scores were not invented, so pooled agreement is missing. Resume with `python3 src/judge.py`.']
+        lines+=['A complete 60-reply judge file is not packaged. The HTTPS provider blocked later POSTs from this environment (HTTP 405 or content-filter). Remaining scores were not invented. Reviewers can resume with `python3 src/judge.py`.']
         lines+=system_table('Human mean scores by system (20 matched messages each). Do not hide poor relevance behind high safety.', human_systems)
         lines+=['','The agent is better grounded and safer than copying a nearest historical reply, which can import outdated promises. Its relevance is only slightly above the trivial generic escalation. Safety is not usefulness.','']
     else:
         lines+=['**Judge evidence is pending.** No API credentials were configured and no human reply ratings were supplied. No judge scores or agreement figures have been invented.','']
     lines+=['## Five observed limitations','']
-    agent_fail=[f for f in (failures or []) if f['model']=='agent']
-    selected=[]
-    seen=set()
-    for item in agent_fail:
-        key=(item['gold_intent'],item['predicted_intent'],item['gold_escalate'],item['predicted_escalate'])
-        if key in seen: continue
-        seen.add(key); selected.append(item)
-        if len(selected)==5: break
-    if selected:
-        lines+=['These examples are agent mismatches against the human gold set. They are not ranked population frequencies. Rules were not retuned on these examples.','']
-        for i,item in enumerate(selected,1):
-            lines+=[f'{i}. **{item["gold_intent"]} labelled, {item["predicted_intent"]} predicted (tweet {item["id"]}).** Human reason: {item["human_reason"]} Draft: “{item["reply"]}”','']
-    else:
-        lines+=['These are qualitative inspections of real cached outputs, not human gold labels or ranked population frequencies. Rules were not tuned on these inspected test failures.','']
-        examples=[('990233','Wrong clarification for a delivery subcase','The customer reports an empty package. The draft asks for the delivery estimate. A broad delivery intent loses the difference between a late parcel and missing contents.'),('259408','Payment question assumes the wrong cause','The customer reports a two-for-£14 discount not applying. The draft asks about renewing subscriptions. A source-supported question can still be irrelevant.'),('2280471','Product words override the requested action','The customer complains about a birthday gift card arriving late. The classifier chooses payment and asks about subscription renewal. Keyword priority treats “gift card” as billing evidence.'),('480495','Troubleshooting assumes an error','The customer asks where the Home button is. The draft asks what error appears while opening the app. An app keyword does not imply an app failure.'),('2809446','Over-escalation of routine feedback','The customer says “Thanks a lot” with a URL. The draft asks what happened and escalates. The exact acknowledgement rule is deliberately narrow and sacrifices automation coverage.')]
-        for i,(id,title,note) in enumerate(examples,1):
-            p=idx[id];lines+=[f'{i}. **{title} (tweet {id}).** {note} Draft: “{p["reply"]}”','']
+    by_fail={f['id']:f for f in (failures or []) if f['model']=='agent'}
+    analyses=[
+        ('2652457','Wallet credit falls through keywords into return-like neighbors','The message reports Amazon Pay credit missing from a wallet. It never uses refund, return, cancel, payment, billing, or credit card, so the ordered keyword rules assign other. TF-IDF then votes using nearest training messages, which here are return/cancellation threads, so the draft is a return-or-cancellation escalation. Hypothesis: wallet/balance/credited cases are a payment sublanguage the rules do not cover. Dev check: on development data only, add wallet|balance|credited as payment evidence and measure payment recall against a rise in refund_return false positives. Do not retune on this test tweet.'),
+        ('1972845','Process complaints without complaint keywords become other','The customer reports live-chat disconnecting too quickly for a disabled typist. That is a service-process complaint, labelled feedback, but the feedback rule only fires on thanks, thank you, complaint, suggestion, customer service, love, or great. None of those tokens appear, so the classifier stays on other and asks a generic “what is going on?” Hypothesis: many gold-feedback rows are operational complaints, not sentiment words. Dev check: count how many development feedback labels lack those keywords, then try a chat|agent|disconnect|hold pattern on that split only.'),
+        ('222856','Entity keywords treat a product suggestion as a billing action','The customer asks for SBI/ICICI cards to join a cashback programme. The human label is feedback with no escalation. The payment rule matches debit inside debit/credit cards, so the agent asks about subscriptions up for renewal. Hypothesis: brand and payment nouns in suggestions are being read as the requested action. Dev check: on development feedback and payment rows, split mentions that co-occur with want/would like/suggestion versus charged/refunded, and measure whether requiring a billing verb cuts this error class.'),
+        ('911953','Unresolved orders without shipping vocabulary miss delivery','The customer says an iPhone order is unresolved after mailing the CEO and includes an order id. There is no deliver, ship, parcel, package, tracking, late, or delay token, so the delivery rule never fires and the draft is a generic escalation. Hypothesis: “order not resolved” is a delivery/fulfillment request in this brand’s data even without logistics words. Dev check: among development delivery labels, measure the share that contain order but not the current delivery lexicon, then test adding a bounded order keyword and inspect precision against payment and refund_return.'),
+        ('2809446','Exact-thanks auto-handle misses ordinary acknowledgements','Gold is feedback with escalate=0: a routine thanks plus a URL. The auto-handle regex requires the whole message, after stripping [USER], to be thanks, thank you, thanks so much, great, or awesome. “Thanks a lot” and leftover [URL] both fail, so the system escalates and asks what happened. Hypothesis: coverage is near zero because the pattern is a closed phrase list, not “thanks as the only content words.” Dev check: on development escalate=0 rows, measure how many would match if [URL] were ignored and a lot were allowed, and what the unsafe-auto rate would be if that rule were applied only there.'),
+    ]
+    lines+=['These five cases are agent errors on the human gold set. They are not ranked population frequencies. Rules were not retuned on these test tweets.','']
+    for i,(tid,title,note) in enumerate(analyses,1):
+        item=by_fail.get(tid) or {'gold_intent':'?','predicted_intent':'?','reply':idx.get(tid,{}).get('reply','')}
+        lines+=[f'{i}. **{title} (tweet {tid}; gold {item.get("gold_intent")}, predicted {item.get("predicted_intent")}).** {note} Draft: “{item["reply"]}”','']
     auto=sum(p['escalate']==0 for p in agent)
     headline=('Escalating every message can yield perfect escalation recall and no observed auto-handling errors while automating nothing. In this sample the agent escalates all 200 messages, so unsafe-auto rate is undefined. ' if auto==0 else f'Auto-coverage was {auto}/200. A low unsafe-auto rate can still hide rare high-cost mistakes, and the sample is not representative of unanswered or follow-up traffic. ')
     lines+=['## What is misleading about my headline number?','',

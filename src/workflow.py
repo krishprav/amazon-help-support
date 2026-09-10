@@ -3,8 +3,11 @@ import argparse, collections, csv, json, os, random, re, sys, time
 from pathlib import Path
 from support import read,write,dump,digest,filehash,normalized,clean,intent,Retriever,predict,INTENTS,validate
 from evaluation import score,bootstrap,agreement,system_rating_summary
+from judge import RUBRIC
 SYSTEMS=['trivial','simple','agent']
 DIMS=['grounding','relevance','safety','clarity']
+METRIC_KEYS=['n','intent_accuracy','intent_macro_f1','intent_macro_f1_present_classes','auto_coverage','auto_count','unsafe_auto_count','unsafe_auto_rate','unsafe_auto_wilson95','human_needed_count','escalation_recall','unnecessary_escalation_count']
+AGREEMENT_KEYS=['n','exact_agreement','within_one','mean_absolute_error','quadratic_weighted_kappa']
 ROOT=Path(__file__).resolve().parents[1]
 
 def source_hash():
@@ -97,7 +100,7 @@ def agreement_payload(humans, judge, mapping, human_path, judge_path):
     metrics={k:agreement([(int(r[k]),idx[r['review_id']][k]) for r in humans]) for k in DIMS}
     disagreements=[{'review_id':r['review_id'],'dimension':k,'human':int(r[k]),'judge':idx[r['review_id']][k]} for r in humans for k in DIMS if abs(int(r[k])-idx[r['review_id']][k])>=2]
     judge_rows=[{'review_id':r['review_id'],**{k:r[k] for k in DIMS}} for r in judge['ratings']]
-    return {'metrics':metrics,'systems':{'human':system_rating_summary(humans,mapping,DIMS,SYSTEMS),'judge':system_rating_summary(judge_rows,mapping,DIMS,SYSTEMS)},'large_disagreements':disagreements,'human_sha256':filehash(human_path),'judge_sha256':filehash(judge_path),'caveat':'60 replies from 20 messages are correlated; agreement is descriptive, not a population guarantee. Pooled judge-human agreement does not by itself compare systems.'}
+    return {'metrics':metrics,'systems':{'human':system_rating_summary(humans,mapping,DIMS,SYSTEMS),'judge':system_rating_summary(judge_rows,mapping,DIMS,SYSTEMS)},'large_disagreements':disagreements,'human_sha256':filehash(human_path),'judge_sha256':filehash(judge_path),'rubric_sha256':judge['metadata']['rubric_sha256'],'caveat':'60 replies from 20 messages are correlated; agreement is descriptive, not a population guarantee. Pooled judge-human agreement does not by itself compare systems.'}
 
 def compare(a):
     humans=read(a.human);judge=json.loads(Path(a.judge).read_text())
@@ -115,36 +118,55 @@ def verify_blind_matches_predictions(bundle):
         b=blind[row['review_id']]
         if b['message']!=p['message'] or b['reply']!=p['reply']:raise ValueError('Blind replies drifted from predictions')
 
+def verify_gold_matches_test(gold, test):
+    test_by={r['id']:r for r in test}
+    if [r['id'] for r in gold]!=[r['id'] for r in test]:raise ValueError('Gold order differs from test')
+    for g in gold:
+        t=test_by[g['id']]
+        if g['group']!=t['group'] or g['message']!=t['message']:raise ValueError('Gold customer group or message drifted from test')
+    if digest(json.dumps([(r['id'],r['message']) for r in gold]))!=digest(json.dumps([(r['id'],r['message']) for r in test])):raise ValueError('Gold messages differ from test')
+
+def verify_review_evidence(train, bundle):
+    train_ids={r['id'] for r in train}
+    mapping=json.loads((ROOT/'review/review_mapping.json').read_text())
+    blind={r['review_id']:r for r in json.loads((ROOT/'review/blind_replies.json').read_text())}
+    if len(mapping)!=60 or len(blind)!=60:raise ValueError('Blind review cohort is incomplete')
+    if {r['review_id'] for r in mapping}!=set(blind):raise ValueError('Review mapping does not match blind replies')
+    verify_blind_matches_predictions(bundle)
+    for row in mapping:
+        packet=blind[row['review_id']]['evidence']
+        if not packet:raise ValueError('Empty review evidence packet')
+        ids=[e['id'] for e in packet]
+        if len(ids)!=len(set(ids)):raise ValueError('Duplicate evidence IDs in a review packet')
+        if any(e['id'] not in train_ids for e in packet):raise ValueError('Review evidence outside training')
+
 def verify_chain():
     train=read(ROOT/'data/train.csv');test=read(ROOT/'data/test.csv');gold=read(ROOT/'data/gold.csv')
     isolation(train,test);human_labels(gold)
-    if digest(json.dumps([(r['id'],r['message']) for r in gold]))!=digest(json.dumps([(r['id'],r['message']) for r in test])):raise ValueError('Gold messages differ from test')
+    verify_gold_matches_test(gold, test)
     bundle=json.loads((ROOT/'results/predictions.json').read_text())
     if bundle['metadata']['train_sha256']!=filehash(ROOT/'data/train.csv'):raise ValueError('Stale training data')
     if bundle['metadata']['code_sha256']!=source_hash():raise ValueError('Stale agent code')
     if digest(json.dumps([(r['id'],r['message']) for r in test]))!=bundle['metadata']['messages_sha256']:raise ValueError('Prediction messages differ from test')
-    verify_blind_matches_predictions(bundle)
+    verify_review_evidence(train, bundle)
     stored=json.loads((ROOT/'results/final/metrics.json').read_text())
     recomputed,_=score_systems(gold,bundle,ROOT/'data/gold.csv',ROOT/'results/predictions.json')
     if stored['gold_sha256']!=filehash(ROOT/'data/gold.csv'):raise ValueError('Stale gold metrics')
     if stored['predictions_sha256']!=filehash(ROOT/'results/predictions.json'):raise ValueError('Stale predictions')
     for model in SYSTEMS:
         if model not in stored.get('systems',{}):raise ValueError('Forged or incomplete metrics')
-        for key in ['intent_macro_f1','intent_accuracy','auto_coverage','unsafe_auto_rate','escalation_recall','auto_count']:
-            if stored['systems'][model].get(key)!=recomputed['systems'][model][key]:raise ValueError(f'Metrics mismatch for {model}.{key}')
+        if stored['systems'][model]!=recomputed['systems'][model]:raise ValueError(f'Metrics mismatch for {model}')
     humans=read(ROOT/'data/human_ratings.csv');judge=json.loads((ROOT/'results/judge.json').read_text())
     mapping=json.loads((ROOT/'review/review_mapping.json').read_text())
+    if {r['review_id'] for r in humans}!={m['review_id'] for m in mapping}:raise ValueError('Human ratings do not cover the review mapping')
+    if judge['metadata'].get('rubric_sha256')!=digest(RUBRIC):raise ValueError('Judge rubric hash mismatch')
     expected=agreement_payload(humans,judge,mapping,ROOT/'data/human_ratings.csv',ROOT/'results/judge.json')
     stored_ag=json.loads((ROOT/'results/final/agreement.json').read_text())
     if stored_ag['human_sha256']!=filehash(ROOT/'data/human_ratings.csv') or stored_ag['judge_sha256']!=filehash(ROOT/'results/judge.json'):raise ValueError('Stale agreement')
+    if stored_ag.get('rubric_sha256')!=digest(RUBRIC):raise ValueError('Agreement rubric hash mismatch')
     if 'systems' not in stored_ag:raise ValueError('Agreement missing per-system reply scores')
-    for dim in DIMS:
-        if stored_ag['metrics'][dim]['exact_agreement']!=expected['metrics'][dim]['exact_agreement']:raise ValueError('Agreement mismatch')
-        if stored_ag['metrics'][dim]['quadratic_weighted_kappa']!=expected['metrics'][dim]['quadratic_weighted_kappa']:raise ValueError('Kappa mismatch')
-    for side in ['human','judge']:
-        for model in SYSTEMS:
-            for dim in DIMS:
-                if stored_ag['systems'][side][model][dim]['mean']!=expected['systems'][side][model][dim]['mean']:raise ValueError('Per-system rating mismatch')
+    for key in ['metrics','systems','large_disagreements']:
+        if stored_ag.get(key)!=expected[key]:raise ValueError(f'Agreement mismatch for {key}')
     provenance=json.loads((ROOT/'data/human_provenance.json').read_text())
     if provenance.get('blind_sha256')!=filehash(ROOT/'review/blind_replies.json'):raise ValueError('Provenance blind mismatch')
     if provenance.get('test_sha256')!=filehash(ROOT/'data/test.csv'):raise ValueError('Provenance test mismatch')
@@ -152,7 +174,7 @@ def verify_chain():
     if manifest.get('report_sha256')!=filehash(ROOT/'docs/report.md'):raise ValueError('Stale report')
     if manifest.get('metrics_sha256')!=filehash(ROOT/'results/final/metrics.json'):raise ValueError('Stale report metrics hash')
     if manifest.get('agreement_sha256')!=filehash(ROOT/'results/final/agreement.json'):raise ValueError('Stale report agreement hash')
-    return {'recomputed':True,'systems':list(SYSTEMS)}
+    return {'recomputed':True,'systems':list(SYSTEMS),'rubric_sha256':digest(RUBRIC)}
 
 def gate(a):
     required=['data/gold.csv','data/human_ratings.csv','data/human_provenance.json','results/judge.json','results/final/metrics.json','results/final/agreement.json','results/final/report_manifest.json']

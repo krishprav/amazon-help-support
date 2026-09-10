@@ -64,7 +64,7 @@ def run(a):
         check_evidence(row['A'],orig,evidence,row.get('D'))
         scores={k:row.get(col,'') for k,col in zip(['grounding','relevance','safety','clarity'],['E','F','G','H'])}
         if any(v not in ['1','2','3','4','5'] for v in scores.values()) or not row.get('I') or not row.get('J'):raise ValueError('Complete all reply ratings, reason and annotator')
-        ratings.append({'review_id':row['A'],**scores,'reason':row['I'],'annotator':row['J'],'label_source':'human'})
+        ratings.append({'review_id':row['A'],'message':orig['message'],'reply':orig['reply'],**scores,'reason':row['I'],'annotator':row['J'],'label_source':'human'})
     if len(ratings)!=len(blind) or len({r['review_id'] for r in ratings})!=len(blind):raise ValueError('Missing or duplicate reply ratings')
     write(a.out+'/gold.csv',gold);write(a.out+'/human_ratings.csv',ratings)
     dump(a.out+'/human_provenance.json',{'source':'xlsx','workbook_sha256':filehash(a.workbook),'blind_sha256':filehash(a.blind),'test_sha256':filehash(a.test),'gold_sha256':filehash(Path(a.out)/'gold.csv'),'ratings_sha256':filehash(Path(a.out)/'human_ratings.csv'),'note':'Human origin is self-attested by the named annotators; the importer validates completeness, not identity.'})

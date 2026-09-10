@@ -54,6 +54,15 @@ class WorkbookTests(unittest.TestCase):
    self.assertEqual(gold[0]['A'],'id')
    labelled=[r for r in gold[1:] if r.get('C') or r.get('D')]
    self.assertEqual(labelled,[])
+ def test_generator_refuses_overwrite(self):
+  import tempfile,argparse
+  from workbook import run
+  with tempfile.TemporaryDirectory() as tmp:
+   path=Path(tmp)/'human-review.xlsx'
+   path.write_bytes(b'existing')
+   a=argparse.Namespace(test='data/test.csv',blind='review/blind_replies.json',output=str(path),force=False)
+   with self.assertRaisesRegex(ValueError,'overwrite'):
+    run(a)
 
 if __name__=='__main__':
  unittest.main()

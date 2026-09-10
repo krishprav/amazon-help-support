@@ -1,5 +1,5 @@
 """Blind, resumable LLM judging. No fabricated scores when credentials are absent."""
-import argparse,json,os,re,subprocess,time,urllib.error
+import argparse,json,os,re,time,urllib.error,urllib.request
 from pathlib import Path
 from support import dump,digest,filehash
 DIMS=['grounding','relevance','safety','clarity']
@@ -17,6 +17,8 @@ def validate_rating(r):
     out={k:r[k] for k in DIMS+['rationale']}
     if isinstance(r.get('judge_model'),str) and r['judge_model'].strip():
         out['judge_model']=r['judge_model']
+    if r.get('evidence_omitted'):
+        out['evidence_omitted']=True
     return out
 
 def parse_model_json(text):
@@ -46,17 +48,20 @@ def models_to_try(primary):
             seen.append(m); out.append(m)
     return out
 
-def curl_post(url, key, body):
-    proc=subprocess.run(['curl','-sS','-X','POST','--http1.1','-w','\n%{http_code}','-H','Authorization: Bearer '+key,'-H','Content-Type: application/json','-H','Accept: application/json','-H','User-Agent: '+user_agent(),'--data-binary','@-',url],input=json.dumps(body),capture_output=True,text=True,timeout=90)
-    if proc.returncode!=0:
-        raise RuntimeError((proc.stderr or 'curl failed')[:300])
-    text=(proc.stdout or '').rstrip()
-    if '\n' not in text:
-        raise RuntimeError('Empty judge HTTP response')
-    payload, _, code = text.rpartition('\n')
-    if code not in {'200','201'}:
-        raise RuntimeError(f'Judge HTTP {code}: {payload[:300]}')
-    return json.loads(payload)
+def http_post(url, key, body):
+    data=json.dumps(body).encode('utf-8')
+    req=urllib.request.Request(url, data=data, method='POST', headers={
+        'Authorization':'Bearer '+key,
+        'Content-Type':'application/json',
+        'Accept':'application/json',
+        'User-Agent':user_agent(),
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=90) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        payload=(e.read() or b'')[:300].decode('utf-8','replace')
+        raise RuntimeError(f'Judge HTTP {e.code}: {payload}') from e
 
 def retryable(err):
     text=str(err)
@@ -75,7 +80,7 @@ def call_model(base, key, model, case):
     last=None
     for attempt in range(3):
         try:
-            response=curl_post(url,key,body)
+            response=http_post(url,key,body)
             return validate_rating(parse_model_json(message_text(response)))
         except (RuntimeError, ValueError, json.JSONDecodeError) as e:
             last=e
@@ -87,21 +92,33 @@ def call_model(base, key, model, case):
             raise
     raise last or RuntimeError('Judge call failed')
 
+def slim_case(case):
+    return {
+        'message':case['message'],
+        'reply':case['reply'],
+        'evidence':[{'id':e['id'],'message':'[omitted]','reply':'[omitted]'} for e in case.get('evidence',[])],
+        'note':'Historical tweet text omitted after a provider content filter. Score the draft against the customer message only.',
+    }
+
 def call(base,key,model,case):
     tried=[]
     last=None
     for m in models_to_try(model):
-        try:
-            out=call_model(base,key,m,case)
-            out['judge_model']=m
-            return out
-        except Exception as e:
-            last=e
-            tried.append(m+': '+str(e)[:120])
-            if blocked(e) or retryable(e) or 'HTTP 405' in str(e):
-                time.sleep(1)
+        for variant, omitted in ((case, False),(slim_case(case), True)):
+            try:
+                out=call_model(base,key,m,variant)
+                out['judge_model']=m
+                if omitted:
+                    out['evidence_omitted']=True
+                return out
+            except Exception as e:
+                last=e
+                tried.append(m+(' slim' if omitted else '')+': '+str(e)[:100])
+                if 'HTTP 405' in str(e):
+                    raise RuntimeError('Judge HTTP 405 from the provider; retry from another network') from e
+                if blocked(e) or retryable(e):
+                    continue
                 continue
-            continue
     raise RuntimeError('Judge failed after models '+'; '.join(tried)) from last
 
 def run(a):
@@ -123,7 +140,7 @@ def run(a):
             time.sleep(0.4)
         used.add(out.get('judge_model',model))
         ratings.append({'review_id':r['review_id'],**out,'cache_key':cache_key})
-        dump(a.output,{'metadata':{'model':model,'models_used':sorted(used),'base_url':base,'rubric_sha256':digest(RUBRIC),'blind_sha256':filehash(a.input),'complete':len(ratings)==len(cases),'seconds':time.time()-start},'ratings':ratings})
+        dump(a.output,{'metadata':{'model':model,'models_used':sorted(used),'base_url':base,'rubric_sha256':digest(RUBRIC),'blind_sha256':filehash(a.input),'complete':len(ratings)==len(cases),'evidence_omitted':sum(1 for x in ratings if x.get('evidence_omitted')),'seconds':time.time()-start},'ratings':ratings})
         print(f'{len(ratings)}/{len(cases)}',flush=True)
 
 def main():
