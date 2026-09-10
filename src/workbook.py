@@ -148,7 +148,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--test', default='data/test.csv')
     p.add_argument('--blind', default='review/blind_replies.json')
-    p.add_argument('--output', default='review/Hiver-human-review.xlsx')
+    p.add_argument('--output', default='review/human-review.xlsx')
     run(p.parse_args())
 
 if __name__ == '__main__':

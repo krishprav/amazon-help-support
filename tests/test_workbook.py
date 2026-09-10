@@ -10,7 +10,7 @@ class WorkbookTests(unittest.TestCase):
   self.test=read('data/test.csv')
   self.blind=json.loads(Path('review/blind_replies.json').read_text())
  def test_packaged_workbook_is_blank_and_complete(self):
-  path=Path('review/Hiver-human-review.xlsx')
+  path=Path('review/human-review.xlsx')
   self.assertTrue(path.exists())
   ss=sheets(path)
   original={r['id']:r for r in self.test}

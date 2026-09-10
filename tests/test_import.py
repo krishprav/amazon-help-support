@@ -6,7 +6,7 @@ from import_review import sheets,run
 from support import read
 class ImportTests(unittest.TestCase):
  def test_real_workbook_has_blank_labels(self):
-  path=Path('review/Hiver-human-review.xlsx')
+  path=Path('review/human-review.xlsx')
   ss=sheets(path);original={r['id']:r for r in read('data/test.csv')}
   rows=[r for r in ss['Gold labels'] if r.get('A') in original]
   self.assertEqual(len(rows),200)

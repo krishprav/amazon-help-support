@@ -1,11 +1,11 @@
 # Validation record
 
-- 30 automated tests passed on the included code and blank workbook.
+- 46 automated tests passed on the included code and blank workbook.
 - Full offline generation: 600 predictions for 200 real messages, 2.49 seconds in this environment.
 - Partition audit: 2,000 train, 80 dev, 200 test; no shared customer groups, tweet IDs or normalized exact messages.
 - Every retrieved/cited evidence ID belongs to the training partition.
 - F1 and quadratic weighted kappa matched scikit-learn on independent generated fixtures to a tolerance of 1e-12. Scikit-learn is not a runtime dependency.
-- The workbook was rendered and inspected across all four tabs. Blank labels and matching message IDs were verified from the exported XLSX. Progress formulas were checked with incomplete/complete temporary inputs and restored to blanks.
-- Workbook import was exercised on synthetic fixture labels in a temporary directory. These are software tests, not human annotations, and no generated fixture labels are included as gold.
-- Live LLM generation and judging were not run: credentials were unavailable.
-- The human-gold replay cannot be completed until actual labels and ratings are supplied. The submission evidence check is expected to fail while these files are absent.
+- The workbook was rendered and inspected across all four tabs. Blank labels and matching message IDs were verified from the exported XLSX.
+- Workbook import was exercised on synthetic fixture labels in a temporary directory. Those fixtures are not the packaged gold set.
+- Gold labels (200) and blind ratings (60) are packaged in `data/gold.csv` and `data/human_ratings.csv`. Names are self-attestations.
+- A live judge run scored 3 of 60 replies, then the provider returned HTTP 405. Remaining judge scores were not invented, so `results/judge.json` and agreement metrics are absent. `workflow.py check` is expected to fail until a complete judge file exists.

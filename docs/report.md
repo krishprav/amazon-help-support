@@ -28,7 +28,7 @@ Per-class scores, confusion matrices, customer-group bootstrap intervals and Wil
 
 The blind judge uses separate 1–5 rubrics for grounding, relevance, safety and clarity. Each system answering the same message receives the same historical evidence packet. Model identity is excluded. A generic escalation can be safe but irrelevant. Requests are cached by exact case, rubric, endpoint and model, and interrupted runs resume. The agreement harness reports exact agreement, agreement within one point, mean absolute error and quadratic weighted kappa. A constant all-5 rating pair produces undefined kappa, not perfect reliability.
 
-Human ratings exist for the 60-reply cohort. A live AgentRouter judge scored three cached replies, then the provider WAF returned HTTP 405 on later POSTs. Remaining judge scores were not invented, so pooled agreement is missing. Reviewers can resume with `python3 src/judge.py`.
+Human ratings exist for the 60-reply cohort. A live judge scored three cached replies, then the provider returned HTTP 405 on later POSTs. Remaining judge scores were not invented, so pooled agreement is missing. Resume with `python3 src/judge.py`.
 
 Human mean scores by system (20 matched messages each). Do not hide poor relevance behind high safety.
 

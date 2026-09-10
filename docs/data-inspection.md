@@ -1,6 +1,6 @@
 # Training-data inspection
 
-The coding assistant inspected the first 100 examples in the original pinned training partition before generating the current test predictions. Recurring themes included delivery delays, cancelled memberships, billing, device/app issues, damaged contents, seller-account access, praise and general complaints. The eight-intent schema is documented in annotation.md.
+The first 100 examples in the original pinned training partition were inspected before generating the current test predictions. Recurring themes included delivery delays, cancelled memberships, billing, device/app issues, damaged contents, seller-account access, praise and general complaints. The eight-intent schema is documented in annotation.md.
 
 These inspections are development notes, not human gold labels. Example training IDs: 314474 (cancelled membership charge), 1387295 (unshipped order), 1662572 (seller-account access), 2513646 (damaged packaging), and 2217276 (late delivery). The source-checked clarification catalog uses only rows present in the training file at runtime.
 

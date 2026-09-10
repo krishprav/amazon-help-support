@@ -3,6 +3,10 @@
 !.env.example
 __pycache__/
 *.pyc
+.DS_Store
+.venv/
+venv/
+.idea/
 data/gold_progress.json
 data/ratings_progress.json
 raw/

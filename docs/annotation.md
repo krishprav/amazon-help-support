@@ -6,7 +6,7 @@ The 200-message test cohort was sampled from customer root messages with a direc
 
 Root-only selection, answered-message selection, customer grouping and caps are sampling choices, not a representative sample of all Amazon support traffic. Missing parent references can hide earlier context. Multi-part public replies do not establish that an issue was resolved. Non-English messages and missing-image references remain in the sample.
 
-Inspect training messages before fixing the taxonomy. The coding assistant inspected 100 training examples and defined eight intents; these are not human gold labels. The Guide tab defines them. Choose the primary requested action and explain ambiguity. Where language or context is not interpretable, label other and escalate with a specific reason.
+Inspect training messages before fixing the taxonomy. The first 100 training examples were inspected and used to define eight intents; these are not human gold labels. The Guide tab defines them. Choose the primary requested action and explain ambiguity. Where language or context is not interpretable, label other and escalate with a specific reason.
 
 Complete Gold labels before Reply ratings. Do not inspect historical replies or model predictions while labelling gold. For each message enter intent, escalation 0/1, reason and your actual name or consistent reviewer ID. Escalation means the request needs human account access, policy checking or judgment; it does not mean “the model escalated this”. A routine acknowledgement can be 0. An account action or unresolved ambiguity should be 1.
 
