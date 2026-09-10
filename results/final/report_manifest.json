@@ -1,0 +1,10 @@
+{
+  "report_sha256": "1a4835a0cd18c70c82487498960b6386913e93c4ea36b20a23eb4916739dbe2e",
+  "metrics_sha256": "89b63f1a2b8ed23a84da066228b5492fbd37a91f8e9ae0996176d186440d406c",
+  "agreement_sha256": null,
+  "predictions_sha256": "31fd083e69bdfe15ddf8dfcef57a73ee4e77ce422d6b277b3e3a22a395dae8cf",
+  "code_sha256": "776e5b0e29fa1df1c72f53c1b38a033924d5058156f71192947adaa3995ce345",
+  "word_count": 1171,
+  "metrics_present": true,
+  "agreement_present": false
+}

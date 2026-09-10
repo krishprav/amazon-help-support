@@ -1,0 +1,61 @@
+review_id,grounding,relevance,safety,clarity,reason,annotator,label_source
+R001,5,2,5,5,Generic escalation; pantry spill is not addressed,CB,human
+R002,4,3,5,5,EDD question is only a partial next step for a ship-delay complaint,CB,human
+R003,5,2,5,4,Policy request labelled as a vague product issue,CB,human
+R004,5,2,5,5,Safe generic acknowledgement with no next step,CB,human
+R005,5,1,5,4,Wallet-credit issue framed as a return/cancellation,CB,human
+R006,5,3,5,4,Cancellation topic is named but no targeted help,CB,human
+R007,3,3,4,3,Spanish historical reply; name/context may not match this customer,CB,human
+R008,4,1,5,5,App-error question for a contest-prize issue,CB,human
+R009,5,2,5,5,Safe generic acknowledgement,CB,human
+R010,5,2,5,5,Asks for more info without using the evidence,CB,human
+R011,5,2,5,5,Asks for more info without using the evidence,CB,human
+R012,5,3,5,4,Names delivery but no useful next step,CB,human
+R013,3,3,3,3,"Copied historical reply; asks customer to use a link, first name may not match",CB,human
+R014,5,2,5,5,Safe generic acknowledgement,CB,human
+R015,5,2,5,5,Safe generic acknowledgement,CB,human
+R016,5,3,5,4,Names delivery; still a template,CB,human
+R017,4,4,4,4,Asks whether it shipped and for the confirmation date; grounded in similar cases,CB,human
+R018,5,2,5,5,Safe generic acknowledgement,CB,human
+R019,5,2,5,5,Safe generic acknowledgement,CB,human
+R020,5,2,5,5,Safe generic acknowledgement,CB,human
+R021,4,3,4,3,Historical redirect to a help URL; little issue-specific content,CB,human
+R022,3,2,4,4,Historical “contact us” for a cashback/wallet case,CB,human
+R023,3,3,3,3,Fragmented copied reply; asks to report a missing order,CB,human
+R024,3,2,4,4,Generic troubleshooting tips; may not match the stated issue,CB,human
+R025,4,3,4,4,Offers phone/chat; no issue-specific content,CB,human
+R026,5,2,5,5,Safe generic acknowledgement,CB,human
+R027,3,4,2,4,Authorization explanation may not match this charge; timing claim is unsupported here,CB,human
+R028,5,2,5,5,Safe generic acknowledgement,CB,human
+R029,5,2,5,5,Safe generic acknowledgement,CB,human
+R030,3,2,4,3,German historical shipping-mode text; relevance depends on this being a preorder,CB,human
+R031,5,3,5,4,Names account; still a template,CB,human
+R032,4,4,4,4,Asks if pantry items were damaged; matches a spill/damage report,CB,human
+R033,5,3,5,4,Names delivery; still a template,CB,human
+R034,3,3,2,3,Asks for details via a public URL and warns about PII; still solicits details,CB,human
+R035,5,2,5,5,Safe generic acknowledgement,CB,human
+R036,4,3,5,5,EDD clarification is only partly on-topic,CB,human
+R037,3,2,4,3,German historical reply about exclusion in a confirmation mail,CB,human
+R038,5,2,5,5,Safe generic acknowledgement,CB,human
+R039,5,2,5,5,Asks for more info,CB,human
+R040,4,2,5,5,EDD question for a complaint that may not be a late-date case,CB,human
+R041,5,2,5,5,Safe generic acknowledgement,CB,human
+R042,4,4,4,4,Addresses a safe-place / neighbour-dump delivery miss,CB,human
+R043,5,2,5,5,Safe generic acknowledgement,CB,human
+R044,5,2,5,5,Safe generic acknowledgement,CB,human
+R045,3,1,4,4,Device-reset question is the wrong troubleshooting path,CB,human
+R046,5,2,5,5,Safe generic acknowledgement,CB,human
+R047,4,3,5,5,EDD question is a limited next step,CB,human
+R048,5,2,5,5,Safe generic acknowledgement,CB,human
+R049,5,2,5,5,Safe generic acknowledgement,CB,human
+R050,2,1,4,4,Echo/router questions are unrelated to the customer text,CB,human
+R051,5,2,5,5,Safe generic acknowledgement,CB,human
+R052,5,2,5,5,Safe generic acknowledgement,CB,human
+R053,3,3,3,4,UPS-delay history may not match this carrier; claims outreach not in evidence for this case,CB,human
+R054,5,2,5,4,Product template; may be the wrong bucket,CB,human
+R055,4,3,4,4,Private-channel redirect; no issue-specific content,CB,human
+R056,5,3,5,4,Names delivery; still a template,CB,human
+R057,2,1,3,4,Email-change instructions are a different account task,CB,human
+R058,5,2,5,5,Generic “request” template,CB,human
+R059,4,3,3,4,Late-order apology; asks for order details via URL,CB,human
+R060,5,2,5,4,Return/cancel template; may be the wrong bucket,CB,human

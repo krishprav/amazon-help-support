@@ -1,0 +1,550 @@
+{
+  "provenance": {
+    "status": "UNSCORED_REAL_DATA",
+    "train_sha256": "f39804aaff241b5892e75dfcd5f569a06dd28c263ab21b04af8487e9edad664f",
+    "messages_sha256": "bca9a3fc8e18561ce413c86365cdf4e795c7af2e74a6fb9de3090d1d26bdc772",
+    "code_sha256": "776e5b0e29fa1df1c72f53c1b38a033924d5058156f71192947adaa3995ce345",
+    "threshold": 0.25,
+    "threshold_status": "fixed engineering choice; not human-calibrated",
+    "label_source": "weak keyword labels except any explicitly labelled training rows",
+    "llm": false,
+    "llm_model": null,
+    "runtime_seconds": 2.4888902299999245,
+    "n_messages": 200
+  },
+  "gold_sha256": "95d0466ac74a96a25069340c307455b517089c1b22f80ec6317663f6a7bec31b",
+  "predictions_sha256": "31fd083e69bdfe15ddf8dfcef57a73ee4e77ce422d6b277b3e3a22a395dae8cf",
+  "systems": {
+    "trivial": {
+      "n": 200,
+      "intent_accuracy": 0.115,
+      "intent_macro_f1": 0.0257847533632287,
+      "intent_macro_f1_present_classes": 0.0257847533632287,
+      "auto_coverage": 0.0,
+      "auto_count": 0,
+      "unsafe_auto_count": 0,
+      "unsafe_auto_rate": null,
+      "unsafe_auto_wilson95": null,
+      "human_needed_count": 187,
+      "escalation_recall": 1.0,
+      "unnecessary_escalation_count": 13,
+      "per_intent": {
+        "delivery": {
+          "support": 76,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "refund_return": {
+          "support": 17,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "payment": {
+          "support": 14,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "account": {
+          "support": 8,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "product": {
+          "support": 31,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "subscription": {
+          "support": 4,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "feedback": {
+          "support": 27,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "other": {
+          "support": 23,
+          "predicted": 200,
+          "precision": 0.115,
+          "recall": 1.0,
+          "f1": 0.2062780269058296
+        }
+      },
+      "confusion_matrix": {
+        "delivery": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 76
+        },
+        "refund_return": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 17
+        },
+        "payment": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 14
+        },
+        "account": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 8
+        },
+        "product": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 31
+        },
+        "subscription": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 4
+        },
+        "feedback": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 27
+        },
+        "other": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 23
+        }
+      },
+      "bootstrap": {
+        "method": "customer-group percentile bootstrap",
+        "iterations": 500,
+        "seed": 2026,
+        "intervals95": {
+          "intent_macro_f1": [
+            0.016666666666666666,
+            0.035269709543568464
+          ],
+          "intent_accuracy": [
+            0.07142857142857142,
+            0.1642512077294686
+          ],
+          "auto_coverage": [
+            0.0,
+            0.0
+          ],
+          "escalation_recall": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "simple": {
+      "n": 200,
+      "intent_accuracy": 0.48,
+      "intent_macro_f1": 0.43402814903333037,
+      "intent_macro_f1_present_classes": 0.43402814903333037,
+      "auto_coverage": 0.0,
+      "auto_count": 0,
+      "unsafe_auto_count": 0,
+      "unsafe_auto_rate": null,
+      "unsafe_auto_wilson95": null,
+      "human_needed_count": 187,
+      "escalation_recall": 1.0,
+      "unnecessary_escalation_count": 13,
+      "per_intent": {
+        "delivery": {
+          "support": 76,
+          "predicted": 51,
+          "precision": 0.8235294117647058,
+          "recall": 0.5526315789473685,
+          "f1": 0.6614173228346457
+        },
+        "refund_return": {
+          "support": 17,
+          "predicted": 17,
+          "precision": 0.9411764705882353,
+          "recall": 0.9411764705882353,
+          "f1": 0.9411764705882353
+        },
+        "payment": {
+          "support": 14,
+          "predicted": 11,
+          "precision": 0.45454545454545453,
+          "recall": 0.35714285714285715,
+          "f1": 0.4
+        },
+        "account": {
+          "support": 8,
+          "predicted": 5,
+          "precision": 0.8,
+          "recall": 0.5,
+          "f1": 0.6153846153846154
+        },
+        "product": {
+          "support": 31,
+          "predicted": 11,
+          "precision": 0.45454545454545453,
+          "recall": 0.16129032258064516,
+          "f1": 0.23809523809523808
+        },
+        "subscription": {
+          "support": 4,
+          "predicted": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "feedback": {
+          "support": 27,
+          "predicted": 7,
+          "precision": 0.7142857142857143,
+          "recall": 0.18518518518518517,
+          "f1": 0.29411764705882354
+        },
+        "other": {
+          "support": 23,
+          "predicted": 95,
+          "precision": 0.2,
+          "recall": 0.8260869565217391,
+          "f1": 0.3220338983050847
+        }
+      },
+      "confusion_matrix": {
+        "delivery": {
+          "delivery": 42,
+          "refund_return": 0,
+          "payment": 2,
+          "account": 0,
+          "product": 1,
+          "subscription": 2,
+          "feedback": 0,
+          "other": 29
+        },
+        "refund_return": {
+          "delivery": 0,
+          "refund_return": 16,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 1
+        },
+        "payment": {
+          "delivery": 1,
+          "refund_return": 0,
+          "payment": 5,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 8
+        },
+        "account": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 4,
+          "product": 1,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 3
+        },
+        "product": {
+          "delivery": 3,
+          "refund_return": 0,
+          "payment": 2,
+          "account": 0,
+          "product": 5,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 21
+        },
+        "subscription": {
+          "delivery": 0,
+          "refund_return": 1,
+          "payment": 1,
+          "account": 1,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 1
+        },
+        "feedback": {
+          "delivery": 4,
+          "refund_return": 0,
+          "payment": 1,
+          "account": 0,
+          "product": 4,
+          "subscription": 0,
+          "feedback": 5,
+          "other": 13
+        },
+        "other": {
+          "delivery": 1,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 1,
+          "feedback": 2,
+          "other": 19
+        }
+      },
+      "bootstrap": {
+        "method": "customer-group percentile bootstrap",
+        "iterations": 500,
+        "seed": 2026,
+        "intervals95": {
+          "intent_macro_f1": [
+            0.34916602490052623,
+            0.4951831171916703
+          ],
+          "intent_accuracy": [
+            0.4153846153846154,
+            0.5463414634146342
+          ],
+          "auto_coverage": [
+            0.0,
+            0.0
+          ],
+          "escalation_recall": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "agent": {
+      "n": 200,
+      "intent_accuracy": 0.505,
+      "intent_macro_f1": 0.4406956057892365,
+      "intent_macro_f1_present_classes": 0.4406956057892365,
+      "auto_coverage": 0.0,
+      "auto_count": 0,
+      "unsafe_auto_count": 0,
+      "unsafe_auto_rate": null,
+      "unsafe_auto_wilson95": null,
+      "human_needed_count": 187,
+      "escalation_recall": 1.0,
+      "unnecessary_escalation_count": 13,
+      "per_intent": {
+        "delivery": {
+          "support": 76,
+          "predicted": 57,
+          "precision": 0.8245614035087719,
+          "recall": 0.618421052631579,
+          "f1": 0.706766917293233
+        },
+        "refund_return": {
+          "support": 17,
+          "predicted": 19,
+          "precision": 0.8421052631578947,
+          "recall": 0.9411764705882353,
+          "f1": 0.8888888888888888
+        },
+        "payment": {
+          "support": 14,
+          "predicted": 12,
+          "precision": 0.5,
+          "recall": 0.42857142857142855,
+          "f1": 0.46153846153846156
+        },
+        "account": {
+          "support": 8,
+          "predicted": 6,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285714
+        },
+        "product": {
+          "support": 31,
+          "predicted": 13,
+          "precision": 0.46153846153846156,
+          "recall": 0.1935483870967742,
+          "f1": 0.2727272727272727
+        },
+        "subscription": {
+          "support": 4,
+          "predicted": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "feedback": {
+          "support": 27,
+          "predicted": 7,
+          "precision": 0.7142857142857143,
+          "recall": 0.18518518518518517,
+          "f1": 0.29411764705882354
+        },
+        "other": {
+          "support": 23,
+          "predicted": 80,
+          "precision": 0.2125,
+          "recall": 0.7391304347826086,
+          "f1": 0.3300970873786408
+        }
+      },
+      "confusion_matrix": {
+        "delivery": {
+          "delivery": 47,
+          "refund_return": 0,
+          "payment": 2,
+          "account": 0,
+          "product": 1,
+          "subscription": 4,
+          "feedback": 0,
+          "other": 22
+        },
+        "refund_return": {
+          "delivery": 0,
+          "refund_return": 16,
+          "payment": 0,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 1
+        },
+        "payment": {
+          "delivery": 1,
+          "refund_return": 1,
+          "payment": 6,
+          "account": 0,
+          "product": 0,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 6
+        },
+        "account": {
+          "delivery": 0,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 4,
+          "product": 1,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 3
+        },
+        "product": {
+          "delivery": 3,
+          "refund_return": 0,
+          "payment": 2,
+          "account": 0,
+          "product": 6,
+          "subscription": 1,
+          "feedback": 0,
+          "other": 19
+        },
+        "subscription": {
+          "delivery": 0,
+          "refund_return": 1,
+          "payment": 1,
+          "account": 1,
+          "product": 1,
+          "subscription": 0,
+          "feedback": 0,
+          "other": 0
+        },
+        "feedback": {
+          "delivery": 4,
+          "refund_return": 1,
+          "payment": 1,
+          "account": 0,
+          "product": 4,
+          "subscription": 0,
+          "feedback": 5,
+          "other": 12
+        },
+        "other": {
+          "delivery": 2,
+          "refund_return": 0,
+          "payment": 0,
+          "account": 1,
+          "product": 0,
+          "subscription": 1,
+          "feedback": 2,
+          "other": 17
+        }
+      },
+      "bootstrap": {
+        "method": "customer-group percentile bootstrap",
+        "iterations": 500,
+        "seed": 2026,
+        "intervals95": {
+          "intent_macro_f1": [
+            0.35383769275127547,
+            0.5009400307565132
+          ],
+          "intent_accuracy": [
+            0.43283582089552236,
+            0.5728643216080402
+          ],
+          "auto_coverage": [
+            0.0,
+            0.0
+          ],
+          "escalation_recall": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    }
+  }
+}
