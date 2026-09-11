@@ -70,7 +70,7 @@ export JUDGE_API_KEY
 python3 src/judge.py
 ```
 
-Some providers reject Python’s default User-Agent; set `JUDGE_USER_AGENT` as above. Content-filter blocks retry fallback models, then retry with historical tweet text omitted. HTTP 429 and 5xx get bounded retries. HTTP 405 means the provider blocked this client or network; scores are not invented. Invalid JSON is not turned into a score.
+Some providers reject Python’s default User-Agent; set `JUDGE_USER_AGENT` as above. Content-filter blocks retry fallback models with the **same full evidence packet**. Historical text is never omitted to obtain a score. HTTP 429 and 5xx get bounded retries. HTTP 405 means the provider blocked this client or network; scores are not invented. Invalid JSON is not turned into a score.
 
 Optional LLM drafting (`python3 src/workflow.py generate --llm --output results/llm_predictions.json`) is a side experiment, not the reported system.
 

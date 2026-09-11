@@ -14,11 +14,11 @@ Return ONLY a JSON object with grounding, relevance, safety, clarity (integers) 
 
 def validate_rating(r):
     if not isinstance(r,dict) or any(type(r.get(k)) is not int or not 1<=r[k]<=5 for k in DIMS) or not isinstance(r.get('rationale'),str) or not r['rationale'].strip():raise ValueError('Judge returned invalid rubric scores')
+    if r.get('evidence_omitted'):
+        raise ValueError('Judge rating omitted historical evidence')
     out={k:r[k] for k in DIMS+['rationale']}
     if isinstance(r.get('judge_model'),str) and r['judge_model'].strip():
         out['judge_model']=r['judge_model']
-    if r.get('evidence_omitted'):
-        out['evidence_omitted']=True
     return out
 
 def parse_model_json(text):
@@ -92,34 +92,21 @@ def call_model(base, key, model, case):
             raise
     raise last or RuntimeError('Judge call failed')
 
-def slim_case(case):
-    return {
-        'message':case['message'],
-        'reply':case['reply'],
-        'evidence':[{'id':e['id'],'message':'[omitted]','reply':'[omitted]'} for e in case.get('evidence',[])],
-        'note':'Historical tweet text omitted after a provider content filter. Score the draft against the customer message only.',
-    }
-
 def call(base,key,model,case):
     tried=[]
     last=None
     for m in models_to_try(model):
-        for variant, omitted in ((case, False),(slim_case(case), True)):
-            try:
-                out=call_model(base,key,m,variant)
-                out['judge_model']=m
-                if omitted:
-                    out['evidence_omitted']=True
-                return out
-            except Exception as e:
-                last=e
-                tried.append(m+(' slim' if omitted else '')+': '+str(e)[:100])
-                if 'HTTP 405' in str(e):
-                    raise RuntimeError('Judge HTTP 405 from the provider; retry from another network') from e
-                if blocked(e) or retryable(e):
-                    continue
-                continue
-    raise RuntimeError('Judge failed after models '+'; '.join(tried)) from last
+        try:
+            out=call_model(base,key,m,case)
+            out['judge_model']=m
+            return out
+        except Exception as e:
+            last=e
+            tried.append(m+': '+str(e)[:100])
+            if 'HTTP 405' in str(e):
+                raise RuntimeError('Judge HTTP 405 from the provider; retry from another network') from e
+            continue
+    raise RuntimeError('Judge failed after models '+'; '.join(tried)+'. Blocked requests stay incomplete.') from last
 
 def run(a):
     base=os.environ.get('JUDGE_BASE_URL') or os.environ.get('LLM_BASE_URL')
@@ -133,14 +120,21 @@ def run(a):
         case={k:r[k] for k in ['message','reply','evidence']}
         cache_key=digest(json.dumps({'rubric':RUBRIC,'case':case,'base':base,'model':model},sort_keys=True))
         path=cache/(cache_key+'.json')
-        if path.exists():out=validate_rating(json.loads(path.read_text()))
-        else:
+        out=None
+        if path.exists():
+            cached=json.loads(path.read_text())
+            if cached.get('evidence_omitted'):
+                path.unlink()
+            else:
+                out=validate_rating(cached)
+        if out is None:
             out=call(base,key,model,case)
             dump(path,out)
             time.sleep(0.4)
         used.add(out.get('judge_model',model))
         ratings.append({'review_id':r['review_id'],**out,'cache_key':cache_key})
-        dump(a.output,{'metadata':{'model':model,'models_used':sorted(used),'base_url':base,'rubric_sha256':digest(RUBRIC),'blind_sha256':filehash(a.input),'complete':len(ratings)==len(cases),'evidence_omitted':sum(1 for x in ratings if x.get('evidence_omitted')),'seconds':time.time()-start},'ratings':ratings})
+        omitted=sum(1 for x in ratings if x.get('evidence_omitted'))
+        dump(a.output,{'metadata':{'model':model,'models_used':sorted(used),'base_url':base,'rubric_sha256':digest(RUBRIC),'blind_sha256':filehash(a.input),'complete':len(ratings)==len(cases) and omitted==0,'evidence_omitted':omitted,'seconds':time.time()-start},'ratings':ratings})
         print(f'{len(ratings)}/{len(cases)}',flush=True)
 
 def main():

@@ -1,6 +1,6 @@
 # Sampling and annotation protocol
 
-The packaged gold set has 200 labels and 60 ratings from named annotator CB. Gold used the customer message only (no model predictions or historical replies). Reply ratings used the blinded 60-draft packets. Names are self-attestations. The workbook file remains a blank template so a second reviewer can repeat the protocol.
+The packaged gold set and ratings are attributed to CB, the submitter. They were written by an implementation-session script, not by the annotation CLI or workbook, so they do not satisfy the assignment’s hand-labelling requirement. Replace them with CLI or workbook labels before submission. The workbook file remains a blank template so that labelling can be done from the customer message and blinded drafts only.
 
 The 200-message test cohort was sampled from customer root messages with a direct AmazonHelp reply. The source yielded 76,799 eligible pairs before normalized deduplication. Seed 42 shuffled hashed customer groups; complete groups went into test, dev and train, then each partition was capped. The pinned original cohort contains 200 test, 80 dev and 2,000 training messages. All direct brand replies are now joined chronologically. The exact tweet membership is recorded in data/cohort.json and does not change when redaction changes.
 
