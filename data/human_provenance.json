@@ -1,6 +1,6 @@
 {
-  "source": "cli",
-  "annotator_note": "Human origin is self-attested by the named annotators; the software validates completeness, not identity.",
+  "source": "assistant_script",
+  "annotator_note": "CB is the submitter. These 200 gold labels and 60 ratings were written by an implementation-session script, not by the annotation CLI or workbook. They are not independent hand labels.",
   "test_sha256": "9aaaa57592c0a1d07150e060875ef0a9aea5b7d668228636ecc747c8e5d9626e",
   "blind_sha256": "c55de5e1bf1ce6aa9a8b0dc2aaa39535c794f03f74815c312a2773a2c6ef01e0",
   "gold_sha256": "95d0466ac74a96a25069340c307455b517089c1b22f80ec6317663f6a7bec31b",

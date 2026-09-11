@@ -40,6 +40,14 @@ def ask(a):
     majority=collections.Counter(x['intent'] or intent(x['message']) for x in train).most_common(1)[0][0]
     print(json.dumps(predict({'message':clean(a.message)},'agent',r,majority,a.threshold,a.llm),indent=2,ensure_ascii=False))
 
+def shared_evidence(rows, message_id):
+    common={}
+    for x in rows:
+        if x['id']==message_id:
+            for e in x['evidence']:
+                common[e['id']]=e
+    return [common[k] for k in sorted(common)]
+
 def review(a):
     bundle=json.loads(Path(a.predictions).read_text());rows=bundle['predictions'];mapping=[];blind=[]
     rng=random.Random(71)
@@ -47,12 +55,8 @@ def review(a):
     ids=sorted(set(r['id'] for r in rows));chosen=set(rng.sample(ids,min(20,len(ids))))
     selected=[r for r in rows if r['id'] in chosen];rng.shuffle(selected)
     for i,p in enumerate(selected):
-        rid=f'R{i+1:03d}';common={}
-        for x in rows:
-            if x['id']==p['id']:
-                for e in x['evidence']:common[e['id']]=e
-        # Same evidence packet for every system answering the same message.
-        evidence=[common[k] for k in sorted(common)]
+        rid=f'R{i+1:03d}'
+        evidence=shared_evidence(rows, p['id'])
         blind.append({'review_id':rid,'message':p['message'],'reply':p['reply'],'evidence':evidence,'grounding':'','relevance':'','safety':'','clarity':'','reason':'','annotator':''})
         mapping.append({'review_id':rid,'id':p['id'],'model':p['model']})
     dump(a.out+'/blind_replies.json',blind);dump(a.out+'/review_mapping.json',mapping)
@@ -86,8 +90,13 @@ def finish(a):
     dump(a.out+'/metrics.json',result);dump(a.out+'/failures.json',failures)
     print('Scored all three systems. Inspect failures.json and finish report.md before submission.')
 
+def require_full_evidence(judge):
+    if not judge.get('metadata',{}).get('complete'):raise ValueError('Judge run incomplete')
+    if judge['metadata'].get('evidence_omitted'):raise ValueError('Judge ratings omitted historical evidence')
+    if any(r.get('evidence_omitted') for r in judge.get('ratings',[])):raise ValueError('Judge ratings omitted historical evidence')
+
 def agreement_payload(humans, judge, mapping, human_path, judge_path):
-    if not judge['metadata'].get('complete'):raise ValueError('Judge run incomplete')
+    require_full_evidence(judge)
     if judge['metadata']['blind_sha256']!=filehash(ROOT/'review/blind_replies.json'):raise ValueError('Judge rated a different review cohort')
     provenance=json.loads((ROOT/'data/human_provenance.json').read_text())
     if provenance['blind_sha256']!=judge['metadata']['blind_sha256']:raise ValueError('Human and judge cohorts differ')
@@ -126,19 +135,42 @@ def verify_gold_matches_test(gold, test):
         if g['group']!=t['group'] or g['message']!=t['message']:raise ValueError('Gold customer group or message drifted from test')
     if digest(json.dumps([(r['id'],r['message']) for r in gold]))!=digest(json.dumps([(r['id'],r['message']) for r in test])):raise ValueError('Gold messages differ from test')
 
-def verify_review_evidence(train, bundle):
-    train_ids={r['id'] for r in train}
-    mapping=json.loads((ROOT/'review/review_mapping.json').read_text())
-    blind={r['review_id']:r for r in json.loads((ROOT/'review/blind_replies.json').read_text())}
-    if len(mapping)!=60 or len(blind)!=60:raise ValueError('Blind review cohort is incomplete')
-    if {r['review_id'] for r in mapping}!=set(blind):raise ValueError('Review mapping does not match blind replies')
-    verify_blind_matches_predictions(bundle)
+def packet_rows(packet):
+    return [{'id':e['id'],'message':e['message'],'reply':e['reply']} for e in packet]
+
+def check_review_evidence(train, bundle, mapping, blind):
+    train_by={r['id']:r for r in train}
+    blind_by={r['review_id']:r for r in blind}
+    if len(mapping)!=60 or len(blind_by)!=60:raise ValueError('Blind review cohort is incomplete')
+    if {r['review_id'] for r in mapping}!=set(blind_by):raise ValueError('Review mapping does not match blind replies')
+    for p in bundle['predictions']:
+        for e in p.get('evidence',[]):
+            src=train_by.get(e['id'])
+            if not src:raise ValueError('Review evidence outside training')
+            if e.get('message')!=src['message'] or e.get('reply')!=src['historical_reply']:
+                raise ValueError('Prediction evidence text drifted from training')
+    packets_by_message={}
     for row in mapping:
-        packet=blind[row['review_id']]['evidence']
+        packet=blind_by[row['review_id']].get('evidence') or []
         if not packet:raise ValueError('Empty review evidence packet')
         ids=[e['id'] for e in packet]
         if len(ids)!=len(set(ids)):raise ValueError('Duplicate evidence IDs in a review packet')
-        if any(e['id'] not in train_ids for e in packet):raise ValueError('Review evidence outside training')
+        for e in packet:
+            src=train_by.get(e['id'])
+            if not src:raise ValueError('Review evidence outside training')
+            if e.get('message')!=src['message'] or e.get('reply')!=src['historical_reply']:
+                raise ValueError('Review evidence text drifted from training')
+        expected=packet_rows(shared_evidence(bundle['predictions'], row['id']))
+        if packet_rows(packet)!=expected:raise ValueError('Review evidence packet does not match the shared message packet')
+        packets_by_message.setdefault(row['id'], []).append(tuple((e['id'],e['message'],e['reply']) for e in packet))
+    for packets in packets_by_message.values():
+        if len(set(packets))!=1:raise ValueError('Evidence packets differ across systems for a message')
+
+def verify_review_evidence(train, bundle):
+    mapping=json.loads((ROOT/'review/review_mapping.json').read_text())
+    blind=json.loads((ROOT/'review/blind_replies.json').read_text())
+    verify_blind_matches_predictions(bundle)
+    check_review_evidence(train, bundle, mapping, blind)
 
 def verify_chain():
     train=read(ROOT/'data/train.csv');test=read(ROOT/'data/test.csv');gold=read(ROOT/'data/gold.csv')
@@ -160,6 +192,7 @@ def verify_chain():
     mapping=json.loads((ROOT/'review/review_mapping.json').read_text())
     if {r['review_id'] for r in humans}!={m['review_id'] for m in mapping}:raise ValueError('Human ratings do not cover the review mapping')
     if judge['metadata'].get('rubric_sha256')!=digest(RUBRIC):raise ValueError('Judge rubric hash mismatch')
+    require_full_evidence(judge)
     expected=agreement_payload(humans,judge,mapping,ROOT/'data/human_ratings.csv',ROOT/'results/judge.json')
     stored_ag=json.loads((ROOT/'results/final/agreement.json').read_text())
     if stored_ag['human_sha256']!=filehash(ROOT/'data/human_ratings.csv') or stored_ag['judge_sha256']!=filehash(ROOT/'results/judge.json'):raise ValueError('Stale agreement')
@@ -168,6 +201,7 @@ def verify_chain():
     for key in ['metrics','systems','large_disagreements']:
         if stored_ag.get(key)!=expected[key]:raise ValueError(f'Agreement mismatch for {key}')
     provenance=json.loads((ROOT/'data/human_provenance.json').read_text())
+    if provenance.get('source') not in {'cli','xlsx'}:raise ValueError('Human labels must come from the CLI or workbook importer')
     if provenance.get('blind_sha256')!=filehash(ROOT/'review/blind_replies.json'):raise ValueError('Provenance blind mismatch')
     if provenance.get('test_sha256')!=filehash(ROOT/'data/test.csv'):raise ValueError('Provenance test mismatch')
     manifest=json.loads((ROOT/'results/final/report_manifest.json').read_text())

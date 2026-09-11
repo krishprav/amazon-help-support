@@ -3,9 +3,9 @@ from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,'src')
 from support import clean,Retriever,predict,normalized
-from workflow import isolation,human_labels,verify_gold_matches_test,verify_review_evidence,METRIC_KEYS,AGREEMENT_KEYS
+from workflow import isolation,human_labels,verify_gold_matches_test,verify_review_evidence,check_review_evidence,require_full_evidence,METRIC_KEYS,AGREEMENT_KEYS
 from evaluation import score,agreement,wilson,system_rating_summary
-from judge import validate_rating,run,parse_model_json,models_to_try,http_post
+from judge import validate_rating,run,parse_model_json,models_to_try,http_post,call
 
 class WorkflowTests(unittest.TestCase):
  def row(self,**kw):
@@ -98,6 +98,46 @@ class WorkflowTests(unittest.TestCase):
     self.assertIn(p,data['missing_files'])
   if data['missing_files']:
    self.assertEqual(code,2)
+ def test_packaged_provenance_is_not_hand_import(self):
+  provenance=json.loads(Path('data/human_provenance.json').read_text())
+  self.assertEqual(provenance.get('source'),'assistant_script')
+ def test_omitted_evidence_rating_rejected(self):
+  with self.assertRaisesRegex(ValueError,'omitted'):
+   validate_rating(dict(grounding=5,relevance=2,safety=5,clarity=5,rationale='ok',evidence_omitted=True))
+  with self.assertRaisesRegex(ValueError,'omitted'):
+   require_full_evidence({'metadata':{'complete':True,'evidence_omitted':1},'ratings':[]})
+  with self.assertRaisesRegex(ValueError,'omitted'):
+   require_full_evidence({'metadata':{'complete':True,'evidence_omitted':0},'ratings':[{'review_id':'R1','evidence_omitted':True}]})
+ def test_blocked_request_does_not_score_without_evidence(self):
+  case={'message':'m','reply':'r','evidence':[{'id':'1','message':'hist','reply':'old'}]}
+  with patch.dict(os.environ,{'JUDGE_FALLBACK_MODELS':''}):
+   with patch('judge.call_model', side_effect=RuntimeError('content-blocked')) as mocked:
+    with self.assertRaisesRegex(RuntimeError,'incomplete'):
+     call('https://example.com','k','deepseek-v4-flash',case)
+    self.assertGreaterEqual(mocked.call_count,1)
+    for args,_kw in mocked.call_args_list:
+     sent=args[3]
+     self.assertEqual(sent['evidence'][0]['message'],'hist')
+     self.assertNotIn('[omitted]',sent['evidence'][0]['message'])
+ def test_review_evidence_text_must_match_training(self):
+  from support import read
+  train=read('data/train.csv')
+  bundle=json.loads(Path('results/predictions.json').read_text())
+  mapping=json.loads(Path('review/review_mapping.json').read_text())
+  blind=json.loads(Path('review/blind_replies.json').read_text())
+  check_review_evidence(train,bundle,mapping,blind)
+  blind[0]['evidence'][0]['reply']='tampered historical reply with same id'
+  with self.assertRaisesRegex(ValueError,'text'):
+   check_review_evidence(train,bundle,mapping,blind)
+ def test_shared_evidence_packet_must_match(self):
+  from support import read
+  train=read('data/train.csv')
+  bundle=json.loads(Path('results/predictions.json').read_text())
+  mapping=json.loads(Path('review/review_mapping.json').read_text())
+  blind=json.loads(Path('review/blind_replies.json').read_text())
+  blind[0]['evidence']=blind[0]['evidence'][1:]
+  with self.assertRaisesRegex(ValueError,'packet'):
+   check_review_evidence(train,bundle,mapping,blind)
  def test_gold_customer_group_must_match_test(self):
   with self.assertRaisesRegex(ValueError,'customer group'):
    verify_gold_matches_test([self.row()],[self.row(group='other-customer')])

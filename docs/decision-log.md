@@ -18,4 +18,6 @@
 16. Call the judge with Python’s urllib client, not an extra `curl` binary. A provider HTTP 405 is a missing-evidence failure, not a reason to invent scores.
 17. Refuse to overwrite an existing review workbook unless `--force` is passed. Regenerating the blank template after labelling would destroy work.
 18. Treat packaged ratings without a stored message column as valid if scores are complete; check optional stored text against the blind packet rather than crashing.
-19. Treat `workflow.py check` as a full artifact comparison: every scored statistic, unchanged gold customer groups, complete training-only review evidence, and the current judge rubric hash.
+19. Treat `workflow.py check` as a full artifact comparison: every scored statistic, unchanged gold customer groups, complete training-only review evidence including message/reply text and the shared per-message packet, and the current judge rubric hash.
+20. Never count a judge score that omitted historical evidence. A blocked request stays incomplete.
+21. Accept gold provenance only from the annotation CLI or workbook importer. An assistant-written label file is not hand annotation.
