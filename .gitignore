@@ -1,5 +1,3 @@
-.env
-.env.*
 !.env.example
 __pycache__/
 *.pyc
@@ -12,3 +10,5 @@ data/ratings_progress.json
 raw/
 results/judge_cache/
 *.zip
+config.bat
+node_modules

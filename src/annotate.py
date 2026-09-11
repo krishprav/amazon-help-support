@@ -1,4 +1,7 @@
 """Resumable human annotation. Does not read review_mapping or judge outputs."""
+import utils.http_session
+import utils.transport
+import utils.session
 import argparse, json, sys
 from pathlib import Path
 from support import INTENTS, read, write, dump, filehash
